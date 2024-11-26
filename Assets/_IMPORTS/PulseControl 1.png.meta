@@ -1,0 +1,525 @@
+fileFormatVersion: 2
+guid: cc437ea516f4e894ba8b4f63e3802afa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1808337679664986654
+    second: PulseControl 1_0
+  - first:
+      213: -1993081435661115883
+    second: PulseControl 1_1
+  - first:
+      213: -668263483579611325
+    second: PulseControl 1_2
+  - first:
+      213: 4489949113764741284
+    second: PulseControl 1_3
+  - first:
+      213: -3690299232901523374
+    second: PulseControl 1_4
+  - first:
+      213: 6215974350024021136
+    second: PulseControl 1_5
+  - first:
+      213: -3758198964235357954
+    second: PulseControl 1_6
+  - first:
+      213: 1385479336843523456
+    second: PulseControl 1_7
+  - first:
+      213: -8810874953871263353
+    second: PulseControl 1_8
+  - first:
+      213: -7796639625005978351
+    second: PulseControl 1_9
+  - first:
+      213: 1371232155651072376
+    second: PulseControl 1_10
+  - first:
+      213: 3299428463259802545
+    second: PulseControl 1_11
+  - first:
+      213: -8094830526872886886
+    second: PulseControl 1_12
+  - first:
+      213: 443953860487591284
+    second: PulseControl 1_13
+  - first:
+      213: -8803317953149898705
+    second: PulseControl 1_14
+  - first:
+      213: 7565092612361739130
+    second: PulseControl 1_15
+  - first:
+      213: 7923878990262723603
+    second: PulseControl 1_16
+  - first:
+      213: -5107220417856761595
+    second: PulseControl 1_17
+  - first:
+      213: -8771901881279255172
+    second: PulseControl 1_18
+  - first:
+      213: -5937457071496790162
+    second: PulseControl 1_19
+  - first:
+      213: 7534193432671481591
+    second: PulseControl 1_20
+  - first:
+      213: 7640326647378383473
+    second: PulseControl 1_21
+  - first:
+      213: 8963722232443561931
+    second: PulseControl 1_22
+  - first:
+      213: 3368346046812751088
+    second: PulseControl 1_23
+  - first:
+      213: 5566012898069890006
+    second: PulseControl 1_24
+  - first:
+      213: 5171464368727912209
+    second: PulseControl 1_25
+  - first:
+      213: 8722602279173230402
+    second: PulseControl 1_26
+  - first:
+      213: -6734294586451248590
+    second: PulseControl 1_27
+  - first:
+      213: 830932462601886897
+    second: PulseControl 1_28
+  - first:
+      213: -3114865516297983556
+    second: PulseControl 1_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PulseControl 1_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 479
+        width: 758
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ab266e981881910800000000000000
+      internalID: 1808337679664986654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_1
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 549
+        width: 470
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e5efa7ef62754e0800000000000000
+      internalID: -1993081435661115883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_2
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 906
+        width: 362
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3474fdcf6e9d9b6f0800000000000000
+      internalID: -668263483579611325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 789
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a007812ee08f4e30800000000000000
+      internalID: 4489949113764741284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_4
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 600
+        width: 104
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2581204566c69ccc0800000000000000
+      internalID: -3690299232901523374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_7
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 219
+        width: 458
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085b334cd163a3310800000000000000
+      internalID: 1385479336843523456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_8
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 406
+        width: 136
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789fd1659eb79b580800000000000000
+      internalID: -8810874953871263353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_15
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 251
+        width: 151
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bd0cc36ab9cf860800000000000000
+      internalID: 7565092612361739130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 278
+        width: 449
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf6ce303a96b8048a6a3f3893c865b1
+      internalID: 1100929066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_6
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 50
+        width: 234
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c1cb03773d61047a77f8b5d5545c78
+      internalID: 1047218107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_9
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 22
+        width: 274
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3b38ce1298376428410d4ef3a196b4
+      internalID: -1526348218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 29
+        width: 379
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb947254980811a43891df8e0fd1580c
+      internalID: 1492396109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PulseControl 1_11
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 22
+        width: 244
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fe9f6e4d3f6324e86a23a8ec5f40a5
+      internalID: -1680879034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 764543cc670a3e849a58e200f1ab5d5e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PulseControl 1_10: 1492396109
+      PulseControl 1_11: -1680879034
+      PulseControl 1_30: -1844140423
+      PulseControl 1_5: 1100929066
+      PulseControl 1_6: 1047218107
+      PulseControl 1_9: -1526348218
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

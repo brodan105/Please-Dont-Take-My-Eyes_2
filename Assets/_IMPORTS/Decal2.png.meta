@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 5ba1bc24e6eb3ba4a8a6d57bf817a6c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6559430545230835849
+    second: Decal2_0
+  - first:
+      213: -6724765742521859632
+    second: Decal2_1
+  - first:
+      213: -1204831632945935369
+    second: Decal2_2
+  - first:
+      213: -3996563025395783560
+    second: Decal2_3
+  - first:
+      213: -5244061747163524206
+    second: Decal2_4
+  - first:
+      213: -1575310147792989359
+    second: Decal2_5
+  - first:
+      213: -4608148734284841105
+    second: Decal2_6
+  - first:
+      213: 5048470149090517803
+    second: Decal2_7
+  - first:
+      213: 1831845904363999048
+    second: Decal2_8
+  - first:
+      213: 3902680624100002701
+    second: Decal2_9
+  - first:
+      213: -7505769417186382558
+    second: Decal2_10
+  - first:
+      213: -4410820444246989858
+    second: Decal2_11
+  - first:
+      213: -7564315968293559622
+    second: Decal2_12
+  - first:
+      213: 2587457011901611109
+    second: Decal2_13
+  - first:
+      213: 8429993865417881414
+    second: Decal2_14
+  - first:
+      213: 3226202508321193856
+    second: Decal2_15
+  - first:
+      213: 3028528367062568971
+    second: Decal2_16
+  - first:
+      213: 8930057435323387001
+    second: Decal2_17
+  - first:
+      213: -8129739633265794744
+    second: Decal2_18
+  - first:
+      213: 6390021151107113071
+    second: Decal2_19
+  - first:
+      213: -6546413056978539201
+    second: Decal2_20
+  - first:
+      213: 7943776906641614263
+    second: Decal2_21
+  - first:
+      213: 7829486978711157853
+    second: Decal2_22
+  - first:
+      213: 9078380272455522812
+    second: Decal2_23
+  - first:
+      213: 956652334570432461
+    second: Decal2_24
+  - first:
+      213: 5203142688018596921
+    second: Decal2_25
+  - first:
+      213: -2210037553120158525
+    second: Decal2_26
+  - first:
+      213: 3248078054800270805
+    second: Decal2_27
+  - first:
+      213: -9111455935947373890
+    second: Decal2_28
+  - first:
+      213: -8472046603357696187
+    second: Decal2_29
+  - first:
+      213: 7378927565246321008
+    second: Decal2_30
+  - first:
+      213: 8923259083811981861
+    second: Decal2_31
+  - first:
+      213: 801173765869824004
+    second: Decal2_32
+  - first:
+      213: 3570894803682920927
+    second: Decal2_33
+  - first:
+      213: 7338175859335201730
+    second: Decal2_34
+  - first:
+      213: -9080990564330244155
+    second: Decal2_35
+  - first:
+      213: -7310689301323399067
+    second: Decal2_36
+  - first:
+      213: 936896832661822693
+    second: Decal2_37
+  - first:
+      213: 1279830469641318062
+    second: Decal2_38
+  - first:
+      213: -8729770696687125381
+    second: Decal2_39
+  - first:
+      213: -7415098679363817322
+    second: Decal2_40
+  - first:
+      213: -4098118571079598397
+    second: Decal2_41
+  - first:
+      213: -2057542354394925556
+    second: Decal2_42
+  - first:
+      213: -9100031065156487911
+    second: Decal2_43
+  - first:
+      213: -4377888150918196875
+    second: Decal2_44
+  - first:
+      213: -8978360693684266373
+    second: Decal2_45
+  - first:
+      213: -9145595431280934368
+    second: Decal2_46
+  - first:
+      213: 3232370003521615863
+    second: Decal2_47
+  - first:
+      213: 8944979508732608640
+    second: Decal2_48
+  - first:
+      213: 2855506680111975977
+    second: Decal2_49
+  - first:
+      213: -926326263295132081
+    second: Decal2_50
+  - first:
+      213: -9133718665539428592
+    second: Decal2_51
+  - first:
+      213: -4934752025928662519
+    second: Decal2_52
+  - first:
+      213: -2415945608516486608
+    second: Decal2_53
+  - first:
+      213: 7223879153335710282
+    second: Decal2_54
+  - first:
+      213: -6110403718506846438
+    second: Decal2_55
+  - first:
+      213: 5208675272422002335
+    second: Decal2_56
+  - first:
+      213: -3805990638680040257
+    second: Decal2_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Decal2_0
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 996
+        width: 389
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980b459d357c70b50800000000000000
+      internalID: 6559430545230835849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_1
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 461
+        width: 361
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1c44fbf25dca2a0800000000000000
+      internalID: -6724765742521859632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_2
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 212
+        width: 208
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb8a186304974fe0800000000000000
+      internalID: -1204831632945935369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_3
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 121
+        width: 218
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878e2d46a1b5988c0800000000000000
+      internalID: -3996563025395783560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_4
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 530
+        width: 323
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2939a1c00a95937b0800000000000000
+      internalID: -5244061747163524206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 388
+        width: 241
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1531bb554cf532ae0800000000000000
+      internalID: -1575310147792989359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 286
+        width: 231
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f39c424219c00c0800000000000000
+      internalID: -4608148734284841105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 894
+        width: 234
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2324b74ad4cf0640800000000000000
+      internalID: 5048470149090517803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1228
+        width: 227
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fcedcf4260c6910800000000000000
+      internalID: 1831845904363999048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1156
+        width: 152
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bc74fa95b192630800000000000000
+      internalID: 3902680624100002701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_10
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 999
+        width: 296
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d6d9a7b7626d790800000000000000
+      internalID: -7505769417186382558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decal2_11
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 864
+        width: 302
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3a0acec2e99c2c0800000000000000
+      internalID: -4410820444246989858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5f82153109243654da6f13d75a9ff001
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Decal2_0: 6559430545230835849
+      Decal2_1: -6724765742521859632
+      Decal2_10: -7505769417186382558
+      Decal2_11: -4410820444246989858
+      Decal2_12: -7564315968293559622
+      Decal2_13: 2587457011901611109
+      Decal2_14: 8429993865417881414
+      Decal2_15: 3226202508321193856
+      Decal2_16: 3028528367062568971
+      Decal2_17: 8930057435323387001
+      Decal2_18: -8129739633265794744
+      Decal2_19: 6390021151107113071
+      Decal2_2: -1204831632945935369
+      Decal2_20: -6546413056978539201
+      Decal2_21: 7943776906641614263
+      Decal2_22: 7829486978711157853
+      Decal2_23: 9078380272455522812
+      Decal2_24: 956652334570432461
+      Decal2_25: 5203142688018596921
+      Decal2_26: -2210037553120158525
+      Decal2_27: 3248078054800270805
+      Decal2_28: -9111455935947373890
+      Decal2_29: -8472046603357696187
+      Decal2_3: -3996563025395783560
+      Decal2_30: 7378927565246321008
+      Decal2_31: 8923259083811981861
+      Decal2_32: 801173765869824004
+      Decal2_33: 3570894803682920927
+      Decal2_34: 7338175859335201730
+      Decal2_35: -9080990564330244155
+      Decal2_36: -7310689301323399067
+      Decal2_37: 936896832661822693
+      Decal2_38: 1279830469641318062
+      Decal2_39: -8729770696687125381
+      Decal2_4: -5244061747163524206
+      Decal2_40: -7415098679363817322
+      Decal2_41: -4098118571079598397
+      Decal2_42: -2057542354394925556
+      Decal2_43: -9100031065156487911
+      Decal2_44: -4377888150918196875
+      Decal2_45: -8978360693684266373
+      Decal2_46: -9145595431280934368
+      Decal2_47: 3232370003521615863
+      Decal2_48: 8944979508732608640
+      Decal2_49: 2855506680111975977
+      Decal2_5: -1575310147792989359
+      Decal2_50: -926326263295132081
+      Decal2_51: -9133718665539428592
+      Decal2_52: -4934752025928662519
+      Decal2_53: -2415945608516486608
+      Decal2_54: 7223879153335710282
+      Decal2_55: -6110403718506846438
+      Decal2_56: 5208675272422002335
+      Decal2_57: -3805990638680040257
+      Decal2_6: -4608148734284841105
+      Decal2_7: 5048470149090517803
+      Decal2_8: 1831845904363999048
+      Decal2_9: 3902680624100002701
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,410 @@
+fileFormatVersion: 2
+guid: a392787884002974a850ea220c03e3f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6270483105716119477
+    second: Sign Decals_0
+  - first:
+      213: -5893555973669986183
+    second: Sign Decals_1
+  - first:
+      213: -126097211808100295
+    second: Sign Decals_2
+  - first:
+      213: 7975781533252837106
+    second: Sign Decals_3
+  - first:
+      213: -7875629598286133937
+    second: Sign Decals_4
+  - first:
+      213: -8208393807900390241
+    second: Sign Decals_5
+  - first:
+      213: 1973001069478603678
+    second: Sign Decals_6
+  - first:
+      213: -7249947522761160289
+    second: Sign Decals_7
+  - first:
+      213: 1125693310228135202
+    second: Sign Decals_8
+  - first:
+      213: -925903189906133701
+    second: Sign Decals_9
+  - first:
+      213: 1233405516819184468
+    second: Sign Decals_10
+  - first:
+      213: -7078504305439141171
+    second: Sign Decals_11
+  - first:
+      213: -7944594404969384571
+    second: Sign Decals_12
+  - first:
+      213: 3208344405887192242
+    second: Sign Decals_13
+  - first:
+      213: -2112168415679923467
+    second: Sign Decals_14
+  - first:
+      213: -75513474092000740
+    second: Sign Decals_15
+  - first:
+      213: -7260853656552352331
+    second: Sign Decals_16
+  - first:
+      213: -605415719839001965
+    second: Sign Decals_17
+  - first:
+      213: 8524575796011197505
+    second: Sign Decals_18
+  - first:
+      213: -3155773001494280301
+    second: Sign Decals_19
+  - first:
+      213: 1853617787284295589
+    second: Sign Decals_20
+  - first:
+      213: -3183449477734710241
+    second: Sign Decals_21
+  - first:
+      213: -3547350413555699908
+    second: Sign Decals_22
+  - first:
+      213: -2726839718069775665
+    second: Sign Decals_23
+  - first:
+      213: -9060386576748339399
+    second: Sign Decals_24
+  - first:
+      213: -4554560357042397293
+    second: Sign Decals_25
+  - first:
+      213: 5490196492849409928
+    second: Sign Decals_26
+  - first:
+      213: 2284535504824694933
+    second: Sign Decals_27
+  - first:
+      213: 4059582722863234668
+    second: Sign Decals_28
+  - first:
+      213: 8299128845174478516
+    second: Sign Decals_29
+  - first:
+      213: 8527168036531278115
+    second: Sign Decals_30
+  - first:
+      213: -3396742487887251563
+    second: Sign Decals_31
+  - first:
+      213: 3709519539062962741
+    second: Sign Decals_32
+  - first:
+      213: 1327693720583417463
+    second: Sign Decals_33
+  - first:
+      213: -8667968114583395100
+    second: Sign Decals_34
+  - first:
+      213: -7200451962380606188
+    second: Sign Decals_35
+  - first:
+      213: 546766726662058866
+    second: Sign Decals_36
+  - first:
+      213: 6728661626641628691
+    second: Sign Decals_37
+  - first:
+      213: 4123847836966470604
+    second: Sign Decals_38
+  - first:
+      213: -6189811267304258192
+    second: Sign Decals_39
+  - first:
+      213: 4088724394057784005
+    second: Sign Decals_40
+  - first:
+      213: -139269917069515414
+    second: Sign Decals_41
+  - first:
+      213: -1870370079923233279
+    second: Sign Decals_42
+  - first:
+      213: -2136160186661396442
+    second: Sign Decals_43
+  - first:
+      213: -998752939333633974
+    second: Sign Decals_44
+  - first:
+      213: -5395602217726421490
+    second: Sign Decals_45
+  - first:
+      213: -7087346218287155441
+    second: Sign Decals_46
+  - first:
+      213: 338461392328610319
+    second: Sign Decals_47
+  - first:
+      213: 2847955882121559940
+    second: Sign Decals_48
+  - first:
+      213: 9038853319104744513
+    second: Sign Decals_49
+  - first:
+      213: -4217845804749370625
+    second: Sign Decals_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sign Decals_0
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1078
+        width: 683
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48d3b976d4caf8a0800000000000000
+      internalID: -6270483105716119477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Decals_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 259
+        width: 912
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81ddeeec0269fa44a41d1a1401098b2
+      internalID: -1843345170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Decals_19
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 832
+        width: 718
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737409111abf3ae4b80cd3e3d9b90bcf
+      internalID: -538600376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Decals_1
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1019
+        width: 713
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50c4c49e018b7f41925dda9a69196a4
+      internalID: -103293883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign Decals_2
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 0
+        width: 920
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbf5e1167be92a40b297f91cd9fd426
+      internalID: 1827900250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6bf256ac22821c04a838f62fb0711a75
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sign Decals_1: -103293883
+      Sign Decals_19: -538600376
+      Sign Decals_2: 1827900250
+      Sign Decals_25: -1843345170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

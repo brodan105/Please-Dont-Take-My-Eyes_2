@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: ce3f3f54a8b13b94ea3028a04a92f408
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -996456843203328408
+    second: Wizard_AngryEyebrows_0
+  - first:
+      213: -6436787072448660376
+    second: Wizard_AngryEyebrows_1
+  - first:
+      213: 4883855324654530120
+    second: Wizard_AngryEyebrows_2
+  - first:
+      213: -8751499496011563946
+    second: Wizard_AngryEyebrows_3
+  - first:
+      213: 1728091667715862603
+    second: Wizard_AngryEyebrows_4
+  - first:
+      213: 6636987216160723379
+    second: Wizard_AngryEyebrows_5
+  - first:
+      213: -7798613462357846398
+    second: Wizard_AngryEyebrows_6
+  - first:
+      213: 3543617148790343180
+    second: Wizard_AngryEyebrows_7
+  - first:
+      213: 3656037637891371437
+    second: Wizard_AngryEyebrows_8
+  - first:
+      213: 3006315278467883729
+    second: Wizard_AngryEyebrows_9
+  - first:
+      213: 5340276451571145543
+    second: Wizard_AngryEyebrows_10
+  - first:
+      213: 8070983330197040469
+    second: Wizard_AngryEyebrows_11
+  - first:
+      213: -4084129353591424913
+    second: Wizard_AngryEyebrows_12
+  - first:
+      213: 1647950469944134817
+    second: Wizard_AngryEyebrows_13
+  - first:
+      213: -3623706408211413621
+    second: Wizard_AngryEyebrows_14
+  - first:
+      213: 2726119038977282856
+    second: Wizard_AngryEyebrows_15
+  - first:
+      213: -4298443254323023869
+    second: Wizard_AngryEyebrows_16
+  - first:
+      213: -8693758894096116176
+    second: Wizard_AngryEyebrows_17
+  - first:
+      213: -1616736496095103424
+    second: Wizard_AngryEyebrows_18
+  - first:
+      213: 3945945482053326682
+    second: Wizard_AngryEyebrows_19
+  - first:
+      213: 1910620745942148606
+    second: Wizard_AngryEyebrows_20
+  - first:
+      213: 8609490302254827417
+    second: Wizard_AngryEyebrows_21
+  - first:
+      213: 3680797847087625406
+    second: Wizard_AngryEyebrows_22
+  - first:
+      213: -1092963556095524859
+    second: Wizard_AngryEyebrows_23
+  - first:
+      213: 5562332124926970191
+    second: Wizard_AngryEyebrows_24
+  - first:
+      213: -8117559492448644376
+    second: Wizard_AngryEyebrows_25
+  - first:
+      213: -6891162054433023579
+    second: Wizard_AngryEyebrows_26
+  - first:
+      213: 8383810108322578936
+    second: Wizard_AngryEyebrows_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wizard_AngryEyebrows_15
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 2150
+        width: 520
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8239ba582de15d520800000000000000
+      internalID: 2726119038977282856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 239d734236681064ba52861f4d206492
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Wizard_AngryEyebrows_0: -996456843203328408
+      Wizard_AngryEyebrows_1: -6436787072448660376
+      Wizard_AngryEyebrows_10: 5340276451571145543
+      Wizard_AngryEyebrows_11: 8070983330197040469
+      Wizard_AngryEyebrows_12: -4084129353591424913
+      Wizard_AngryEyebrows_13: 1647950469944134817
+      Wizard_AngryEyebrows_14: -3623706408211413621
+      Wizard_AngryEyebrows_15: 2726119038977282856
+      Wizard_AngryEyebrows_16: -4298443254323023869
+      Wizard_AngryEyebrows_17: -8693758894096116176
+      Wizard_AngryEyebrows_18: -1616736496095103424
+      Wizard_AngryEyebrows_19: 3945945482053326682
+      Wizard_AngryEyebrows_2: 4883855324654530120
+      Wizard_AngryEyebrows_20: 1910620745942148606
+      Wizard_AngryEyebrows_21: 8609490302254827417
+      Wizard_AngryEyebrows_22: 3680797847087625406
+      Wizard_AngryEyebrows_23: -1092963556095524859
+      Wizard_AngryEyebrows_24: 5562332124926970191
+      Wizard_AngryEyebrows_25: -8117559492448644376
+      Wizard_AngryEyebrows_26: -6891162054433023579
+      Wizard_AngryEyebrows_27: 8383810108322578936
+      Wizard_AngryEyebrows_3: -8751499496011563946
+      Wizard_AngryEyebrows_4: 1728091667715862603
+      Wizard_AngryEyebrows_5: 6636987216160723379
+      Wizard_AngryEyebrows_6: -7798613462357846398
+      Wizard_AngryEyebrows_7: 3543617148790343180
+      Wizard_AngryEyebrows_8: 3656037637891371437
+      Wizard_AngryEyebrows_9: 3006315278467883729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
