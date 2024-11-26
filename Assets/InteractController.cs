@@ -11,8 +11,10 @@ public class InteractController : MonoBehaviour
     [SerializeField] bool hiddenSwitch = false;
 
     [SerializeField] bool OneTime;
+    bool destroyActivated = false;
+    [SerializeField] bool OneTimeDestroy;
     [SerializeField] bool locked;
-    bool activated;
+    bool hasActivated;
 
     [SerializeField] public UnityEvent _unlockedEvent;
     [SerializeField] public UnityEvent _lockedEvent;
@@ -28,17 +30,25 @@ public class InteractController : MonoBehaviour
 
     private void Update()
     {
-        if(inTrigger && interactAction.WasPressedThisFrame())
+        if(inTrigger && interactAction.WasPressedThisFrame() && !hasActivated)
         {
             if (locked)
             {
                 _lockedEvent.Invoke();
+                Debug.Log("LOCKED");
             }
             else
             {
+                Debug.Log("UNLOCKED");
+
                 _unlockedEvent.Invoke();
 
                 if (OneTime)
+                {
+                    hasActivated = true;
+                }
+
+                if (OneTimeDestroy)
                 {
                     DestroyComponent();
                 }
@@ -46,9 +56,14 @@ public class InteractController : MonoBehaviour
         }
     }
 
+    public void ResetOneTime()
+    {
+        hasActivated = false;
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (activated && OneTime) return;
+        if (destroyActivated && OneTimeDestroy) return;
 
         if(collision.tag == "Player")
         {
@@ -111,6 +126,11 @@ public class InteractController : MonoBehaviour
         locked = false;
     }
 
+    public void Lock()
+    {
+        locked = true;
+    }
+
     public void DestroyComponent()
     {
         DisableGUI();
@@ -120,13 +140,13 @@ public class InteractController : MonoBehaviour
     /*
     public void Interact(InputAction.CallbackContext context)
     {
-        if (activated && OneTime) return;
+        if (activated && OneTimeDestroy) return;
 
         if(inTrigger && context.action.WasPressedThisFrame())
         {
             _unlockedEvent.Invoke();
 
-            if (OneTime)
+            if (OneTimeDestroy)
             {
                 activated = true;
             }

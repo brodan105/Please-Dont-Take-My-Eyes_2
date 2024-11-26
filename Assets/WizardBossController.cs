@@ -30,6 +30,8 @@ public class WizardBossController : MonoBehaviour
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] float attackSpeed = 5f;
 
+    int cooldownTime = 5;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -38,6 +40,36 @@ public class WizardBossController : MonoBehaviour
         attackCooldown = _bossEnemy._attackCooldown;
         health = _bossEnemy._health;
         damage = _bossEnemy._damage;
+    }
+
+    private void Update()
+    {
+        if(health == 40)
+        {
+            cooldownTime = 3;
+        }
+        else if(health == 20)
+        {
+            cooldownTime = 2;
+        }
+        else
+        {
+            cooldownTime = 5;
+        }
+    }
+
+    public void HurtBoss()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    public void GetDamaged()
+    {
+        StopAllCoroutines();
+
+        health -= 20;
+
+        Debug.Log(health);
     }
 
     private void Idle()
@@ -187,7 +219,7 @@ public class WizardBossController : MonoBehaviour
 
     IEnumerator actionCooldown()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
         CheckIfAttack();
     }

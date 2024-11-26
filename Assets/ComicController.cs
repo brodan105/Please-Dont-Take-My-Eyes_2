@@ -8,6 +8,9 @@ public class ComicController : MonoBehaviour
 {
     [SerializeField] PlayerInput input;
     [SerializeField] Animator comicAnim;
+    [SerializeField] AudioClip sfx;
+
+    AudioSource _source;
 
     // Start next scene event
     [SerializeField] UnityEvent _event;
@@ -17,6 +20,7 @@ public class ComicController : MonoBehaviour
 
     private void Awake()
     {
+        _source = GetComponent<AudioSource>();
         NextSlide();
     }
 
@@ -37,6 +41,12 @@ public class ComicController : MonoBehaviour
 
             canClick = false;
             return;
+        }
+
+        if(slideCount != 0)
+        {
+            // Play SFX
+            _source.PlayOneShot(sfx);
         }
 
         // Add to slide count
