@@ -22,7 +22,7 @@ public class KillBug : MonoBehaviour
     {
         if (isDead) return;
 
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && !PlayerDie.instance.hasDied)
         {
             killBug();
         }
@@ -37,5 +37,8 @@ public class KillBug : MonoBehaviour
         isDead = true;
         PlayerMovement.instance.ImpulseJump();
         CameraShakeManager.instance.CameraShake(impulseSource);
+
+        // Update tally count
+        TallyCountManager.instance.enemyCount++;
     }
 }

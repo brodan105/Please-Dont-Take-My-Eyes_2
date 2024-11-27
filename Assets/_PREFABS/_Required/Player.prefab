@@ -313,7 +313,7 @@ MonoBehaviour:
   playerFirstMove: 1
   speed: 10
   jumpingPower: 16
-  coyoteTime: 0.2
+  coyoteTime: 0.21
   jumpBufferTime: 0.1
   wallJumpingPower: {x: 8, y: 16}
   wallCheck: {fileID: 3312987491248364077}
@@ -355,6 +355,7 @@ MonoBehaviour:
   playerGFX: {fileID: 3472229106161205184}
   runParticle: {fileID: 1155008871825757034}
   respawnTime: 2
+  bossLevel: 0
   hasDied: 0
 --- !u!114 &7063153687072173119
 MonoBehaviour:

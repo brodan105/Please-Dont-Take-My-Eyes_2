@@ -203,7 +203,6 @@ GameObject:
   - component: {fileID: 728727407115402517}
   - component: {fileID: 1733750185047300923}
   - component: {fileID: 2874600582836937577}
-  - component: {fileID: 4157357183023023721}
   - component: {fileID: 1633365358197088452}
   m_Layer: 0
   m_Name: Game Master
@@ -246,12 +245,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019000343560186836}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0dfd9170e5bdbe49a9b7d53120be07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeCounter: {fileID: 0}
+  timePlayingStr: 
+  timerGoing: 0
 --- !u!114 &1733750185047300923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,26 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7f5c56ec6de0249b10a5a10e8d652b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4157357183023023721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8019000343560186836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f37bb6811ab5b4289a4d570bb2b5af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event: {fileID: 0}
-  firstSelectedButton_Pause: {fileID: 0}
-  firstSelectedButton_Option: {fileID: 0}
-  _pauseMenu: {fileID: 0}
-  pulseCooldown: {fileID: 0}
-  _pausePanel: {fileID: 0}
-  _optionPanel: {fileID: 0}
-  playerAudioListener: {fileID: 0}
 --- !u!114 &1633365358197088452
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,17 +7,30 @@ using TMPro;
 public class TimeController : MonoBehaviour
 {
     public static TimeController instance;
+    TallyCountManager _tallyManager;
 
     public TMP_Text timeCounter;
 
+    public string timePlayingStr;
+
     public TimeSpan timePlaying;
-    private bool timerGoing;
+    public bool timerGoing;
 
     private float elapsedTime;
 
     private void Awake()
     {
         instance = this;
+
+        _tallyManager = GameObject.FindAnyObjectByType<TallyCountManager>();
+    }
+
+    private void Update()
+    {
+        if(_tallyManager == null)
+        {
+            _tallyManager = GameObject.FindAnyObjectByType<TallyCountManager>();
+        }
     }
 
     private void Start()
@@ -42,6 +55,9 @@ public class TimeController : MonoBehaviour
     public void StopTimer()
     {
         timerGoing = false;
+
+        // Use this later to add up splits when game / levels for boss are done
+        _tallyManager.levelSplits.Add(timePlayingStr);
     }
 
     private IEnumerator UpdateTimer()
@@ -50,7 +66,7 @@ public class TimeController : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
-            string timePlayingStr = timePlaying.ToString("mm':'ss':'ff");
+            timePlayingStr = timePlaying.ToString("mm':'ss':'ff");
             timeCounter.text = timePlayingStr;
 
             yield return null;

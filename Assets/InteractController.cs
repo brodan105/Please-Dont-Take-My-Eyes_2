@@ -35,12 +35,9 @@ public class InteractController : MonoBehaviour
             if (locked)
             {
                 _lockedEvent.Invoke();
-                Debug.Log("LOCKED");
             }
             else
             {
-                Debug.Log("UNLOCKED");
-
                 _unlockedEvent.Invoke();
 
                 if (OneTime)

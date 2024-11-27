@@ -20,6 +20,10 @@ public class PlayerDie : MonoBehaviour
     [SerializeField] float respawnTime = 5f;
     [SerializeField] bool bossLevel = false;
 
+    Rigidbody2D rb;
+
+    Vector3 lastDeathLocation;
+
     CinemachineImpulseSource impulseSource;
 
     public bool hasDied = false;
@@ -28,7 +32,17 @@ public class PlayerDie : MonoBehaviour
     {
         instance = this;
 
+        rb = GetComponent<Rigidbody2D>();
+
         impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
+    private void Update()
+    {
+        if (hasDied)
+        {
+            transform.position = lastDeathLocation;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,14 +50,13 @@ public class PlayerDie : MonoBehaviour
         if(collision.tag == "Death" && !hasDied)
         {
             Die();
-            hasDied = true;
         }
     }
 
     private void Respawn()
     {
         // Set timer to 0
-        TimeController.instance.ResetTimer();
+        //TimeController.instance.ResetTimer();
 
         // Set playerFirstMove to true so it'll check the players movement to start timer
         PlayerMovement.instance.playerFirstMove = true;
@@ -74,10 +87,15 @@ public class PlayerDie : MonoBehaviour
         SceneController.instance.ReloadScene();
     }
 
-    private void Die()
+    public void Die()
     {
+        hasDied = true;
+
         // Stop speedrun timer
-        TimeController.instance.StopTimer();
+        //TimeController.instance.StopTimer();
+
+        // Update tally count
+        TallyCountManager.instance.deathCount++;
 
         // Play SFX
         var sfx = PlayerAudioController.instance;
@@ -85,9 +103,10 @@ public class PlayerDie : MonoBehaviour
 
         // Disable player controls
         PlayerMovement p = GetComponent<PlayerMovement>();
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
         p.StopMovement();
+
+        lastDeathLocation = transform.position;
 
         // Shake camera
         CameraShakeManager.instance.CameraShake(impulseSource);

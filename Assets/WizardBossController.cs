@@ -1,8 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WizardBossController : MonoBehaviour
 {
+    [SerializeField] UnityEvent _defeatEvent;
+    [SerializeField] UnityEvent _creditEvent;
+
     [Header("References")]
     [SerializeField] Transform playerPos;
     [SerializeField] Vector2 playerOffset;
@@ -24,6 +28,7 @@ public class WizardBossController : MonoBehaviour
 
     bool canAttack;
     bool animationActive;
+    bool defeated;
 
     [Header("Properties")]
     [SerializeField] float attack1Time;
@@ -44,23 +49,44 @@ public class WizardBossController : MonoBehaviour
 
     private void Update()
     {
-        if(health == 40)
+        if(health == 60)
         {
             cooldownTime = 3;
         }
-        else if(health == 20)
+        else if(health == 40)
         {
             cooldownTime = 2;
+        }
+        else if(health == 20)
+        {
+            cooldownTime = 1;
         }
         else
         {
             cooldownTime = 5;
+        }
+
+        if(health <= 0 && !defeated)
+        {
+            defeated = true;
+            Defeat();
         }
     }
 
     public void HurtBoss()
     {
         anim.SetTrigger("Hurt");
+    }
+
+    public void Defeat()
+    {
+        Debug.Log("DEFEATED");
+        anim.SetTrigger("Defeated");
+        _defeatEvent.Invoke();
+        StopAllCoroutines();
+        StopCoroutine(actionCooldown());
+        TimeController.instance.StopTimer();
+        StartCoroutine(Delay());
     }
 
     public void GetDamaged()
@@ -84,7 +110,7 @@ public class WizardBossController : MonoBehaviour
 
     private void CheckIfAttack()
     {
-        if (canAttack)
+        if (canAttack && !defeated)
         {
             int count = Random.Range(0, 30);
 
@@ -185,24 +211,18 @@ public class WizardBossController : MonoBehaviour
         // set hand to fist
         anim.SetTrigger("attack1");
         lastAttack = 1;
-
-        Debug.Log("ATTACK 1");
     }
 
     private void Attack2()
     {
         anim.SetTrigger("attack2");
         lastAttack = 2;
-
-        Debug.Log("ATTACK 2");
     }
 
     private void Attack3()
     {
         anim.SetTrigger("attack3");
         lastAttack = 3;
-
-        Debug.Log("ATTACK 3");
 
     }
 
@@ -222,5 +242,11 @@ public class WizardBossController : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime);
         canAttack = true;
         CheckIfAttack();
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(5);
+        _creditEvent.Invoke();
     }
 }

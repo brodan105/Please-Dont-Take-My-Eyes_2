@@ -4,10 +4,14 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class PauseMenuManager : MonoBehaviour
 {
     bool isPaused = false;
+
+    TallyCountManager tallyManager;
+    [SerializeField] GameObject tallyManagerPrefab;
 
     [Header("References")]
     [SerializeField] EventSystem _event;
@@ -22,6 +26,30 @@ public class PauseMenuManager : MonoBehaviour
     private void Start()
     {
         CheckPause();
+    }
+
+    private void Awake()
+    {
+        tallyManager = GameObject.FindAnyObjectByType<TallyCountManager>();
+
+        if(tallyManager == null)
+        {
+            tallyManager = Instantiate(tallyManagerPrefab.GetComponent<TallyCountManager>());
+        }
+
+        tallyManager._timeControl = GameObject.FindAnyObjectByType<TimeController>();
+        tallyManager._pauseReference = GameObject.FindAnyObjectByType<PauseMenuReference>();
+    }
+
+    public void UnStuckPlayer()
+    {
+        PlayerDie.instance.Die();
+
+        if (isPaused)
+        {
+            isPaused = !isPaused;
+            CheckPause();
+        }
     }
 
     public void PauseButton(InputAction.CallbackContext context)
@@ -39,7 +67,8 @@ public class PauseMenuManager : MonoBehaviour
             _pauseMenu.SetActive(true);
             pulseCooldown.SetActive(false);
 
-            playerAudioListener.enabled = false;
+            //playerAudioListener.enabled = false;
+            AudioListener.pause = true;
 
             if (PlayerMovement.instance.canMove)
             {
@@ -68,7 +97,11 @@ public class PauseMenuManager : MonoBehaviour
             _pauseMenu.SetActive(false);
             pulseCooldown.SetActive(true);
 
-            playerAudioListener.enabled = true;
+            // Update tally counts
+            tallyManager.UpdateTally();
+
+            //playerAudioListener.enabled = true;
+            AudioListener.pause = false;
 
             if (playerCouldMoveBeforePause)
             {

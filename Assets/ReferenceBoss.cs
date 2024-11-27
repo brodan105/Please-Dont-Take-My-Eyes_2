@@ -13,8 +13,6 @@ public class ReferenceBoss : MonoBehaviour
 
     public void HurtBoss2()
     {
-        Debug.Log("ATTACK");
-        //anim.SetTrigger("Attack");
         _control.HurtBoss();
     }
 }
