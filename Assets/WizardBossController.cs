@@ -87,6 +87,7 @@ public class WizardBossController : MonoBehaviour
         StopCoroutine(actionCooldown());
         TimeController.instance.StopTimer();
         StartCoroutine(Delay());
+        TrialController.instance.RetractRightPlatform();
     }
 
     public void GetDamaged()
@@ -106,6 +107,12 @@ public class WizardBossController : MonoBehaviour
     public void Stuck()
     {
         anim.SetBool("isStuck", true);
+    }
+
+    public void ExtendNextTrials()
+    {
+        TrialController.instance.NextTrial();
+        TrialController.instance.ExtendRightPlatform();
     }
 
     private void CheckIfAttack()

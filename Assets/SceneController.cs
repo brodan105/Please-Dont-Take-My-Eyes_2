@@ -65,7 +65,17 @@ public class SceneController : MonoBehaviour
         StartCoroutine(reloadSceneFade());
         PlayerMovement.instance.StopMovement();
 
-        TimeController.instance.StopTimer();
+        TimeController.instance.ReloadTimer();
+
+        _tally.RestartLevelCounts();
+    }
+
+    public void ReloadBossScene()
+    {
+        StartCoroutine(reloadSceneFade());
+        PlayerMovement.instance.StopMovement();
+
+        TimeController.instance.ReloadTimer();
     }
 
     public void Quit()

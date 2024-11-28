@@ -9,6 +9,11 @@ public class TallyCountManager : MonoBehaviour
     public TimeController _timeControl;
     public PauseMenuReference _pauseReference;
 
+    // Integers for the starting values at the beginning of the scene
+    int collectableStart;
+    int enemyStart;
+    int deathStart;
+
     public int collectableCount;
     public int enemyCount;
     public int deathCount;
@@ -23,6 +28,20 @@ public class TallyCountManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
+    }
+
+    public void SetStartCounts()
+    {
+        collectableStart = collectableCount;
+        enemyStart = enemyCount;
+        deathStart = deathCount;
+    }
+
+    public void RestartLevelCounts()
+    {
+        collectableCount = collectableStart;
+        enemyCount = enemyStart;
+        deathCount = deathStart;
     }
 
     public void UpdateTally()

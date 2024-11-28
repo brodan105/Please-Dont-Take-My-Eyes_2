@@ -61,8 +61,36 @@ public class PauseMenuManager : MonoBehaviour
 
     void CheckPause()
     {
+        Pause();
+    }
+
+    public void Unpause()
+    {
+        OpenPausePanel();
+
+        Time.timeScale = 1;
+        _pauseMenu.SetActive(false);
+        pulseCooldown.SetActive(true);
+
+        // Update tally counts
+        tallyManager.UpdateTally();
+
+        //playerAudioListener.enabled = true;
+        AudioListener.pause = false;
+
+        if (playerCouldMoveBeforePause)
+        {
+            PlayerMovement.instance.StartMovement();
+        }
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Pause()
+    {
         if (isPaused)
-        {  
+        {
             Time.timeScale = 0;
             _pauseMenu.SetActive(true);
             pulseCooldown.SetActive(false);
@@ -81,7 +109,7 @@ public class PauseMenuManager : MonoBehaviour
 
             PlayerMovement.instance.StopMovement();
 
-            if(Gamepad.current == null)
+            if (Gamepad.current == null)
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
@@ -91,25 +119,7 @@ public class PauseMenuManager : MonoBehaviour
         }
         else
         {
-            OpenPausePanel();
-
-            Time.timeScale = 1;
-            _pauseMenu.SetActive(false);
-            pulseCooldown.SetActive(true);
-
-            // Update tally counts
-            tallyManager.UpdateTally();
-
-            //playerAudioListener.enabled = true;
-            AudioListener.pause = false;
-
-            if (playerCouldMoveBeforePause)
-            {
-                PlayerMovement.instance.StartMovement();
-            }
-
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Unpause();
         }
     }
 

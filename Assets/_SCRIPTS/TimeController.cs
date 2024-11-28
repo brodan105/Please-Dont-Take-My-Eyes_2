@@ -60,6 +60,11 @@ public class TimeController : MonoBehaviour
         _tallyManager.levelSplits.Add(timePlayingStr);
     }
 
+    public void ReloadTimer()
+    {
+        timerGoing = false;
+    }
+
     private IEnumerator UpdateTimer()
     {
         while (timerGoing)

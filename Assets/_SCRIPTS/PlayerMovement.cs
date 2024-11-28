@@ -12,10 +12,11 @@ public class PlayerMovement : MonoBehaviour
     #region References
     [Header("References")]
     public LayerMask groundLayer;
+    public LayerMask platformLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private ParticleSystem runParticle;
     [SerializeField] private Animator anim;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private PlayerInput _input;
     #endregion
 
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true;
 
     private bool canCheckForInput;
-    private float vertical;
+    public float vertical;
     private bool isFacingRight = true;
     private bool isJumping;
 
@@ -218,6 +219,11 @@ public class PlayerMovement : MonoBehaviour
         // Will return IsGrounded = true if the physics2D circle (with a radius of 0.2f at the position of the ground check object) reads anything on the
         // "groundLayer" (the layermask you set the ground to
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    public bool IsGroundedPlatform()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, platformLayer);
     }
     #endregion
 

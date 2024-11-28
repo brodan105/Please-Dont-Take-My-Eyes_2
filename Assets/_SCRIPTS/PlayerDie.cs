@@ -59,7 +59,7 @@ public class PlayerDie : MonoBehaviour
         //TimeController.instance.ResetTimer();
 
         // Set playerFirstMove to true so it'll check the players movement to start timer
-        PlayerMovement.instance.playerFirstMove = true;
+        //PlayerMovement.instance.playerFirstMove = true;
 
         // Move character to spawn
         transform.position = playerSpawn.position;
@@ -84,7 +84,7 @@ public class PlayerDie : MonoBehaviour
 
     private void RestartLevel()
     {
-        SceneController.instance.ReloadScene();
+        SceneController.instance.ReloadBossScene();
     }
 
     public void Die()
