@@ -24,17 +24,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: -1037
-        inSlope: 54.8
-        outSlope: 54.8
+        inSlope: 54.400784
+        outSlope: 54.400784
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 90
-        value: 3895
-        inSlope: 54.8
-        outSlope: 54.8
+        time: 84.833336
+        value: 3578
+        inSlope: 54.400784
+        outSlope: 54.400784
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -70,7 +70,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 90
+    m_StopTime: 84.833336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -93,17 +93,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: -1037
-        inSlope: 54.8
-        outSlope: 54.8
+        inSlope: 54.400784
+        outSlope: 54.400784
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 90
-        value: 3895
-        inSlope: 54.8
-        outSlope: 54.8
+        time: 84.833336
+        value: 3578
+        inSlope: 54.400784
+        outSlope: 54.400784
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -127,7 +127,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 90
+  - time: 84.833336
     functionName: GoToMainMenu
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -119,7 +119,7 @@ public class WizardBossController : MonoBehaviour
     {
         if (canAttack && !defeated)
         {
-            int count = Random.Range(0, 30);
+            int count = Random.Range(0, 40);
 
             if(count <= 10)
             {
@@ -133,9 +133,13 @@ public class WizardBossController : MonoBehaviour
                     {
                         Attack2();
                     }
-                    else
+                    else if (count > 10 && count2 < 21)
                     {
                         Attack3();
+                    }
+                    else
+                    {
+                        Attack4();
                     }
                 }
                 else
@@ -160,9 +164,13 @@ public class WizardBossController : MonoBehaviour
                     {
                         Attack1 ();
                     }
-                    else
+                    else if (count > 10 && count2 < 21)
                     {
                         Attack3();
+                    }
+                    else
+                    {
+                        Attack4();
                     }
                 }
                 else
@@ -175,26 +183,61 @@ public class WizardBossController : MonoBehaviour
                     }
                 }
             }
+            else if(count > 21 && count < 31)
+            {
+                if (attacksRepeated > 1)
+                {
+                    attacksRepeated = 0;
+
+                    int count2 = Random.Range(0, 30);
+
+                    if (count2 <= 10)
+                    {
+                        Attack1();
+                    }
+                    else if(count > 10 && count2 < 21)
+                    {
+                        Attack2();
+                    }
+                    else
+                    {
+                        Attack4();
+                    }
+                }
+                else
+                {
+                    Attack3();
+
+                    if (lastAttack == 3)
+                    {
+                        attacksRepeated++;
+                    }
+                }
+            }
             else
             {
                 if (attacksRepeated > 1)
                 {
                     attacksRepeated = 0;
 
-                    int count2 = Random.Range(0, 20);
+                    int count2 = Random.Range(0, 30);
 
                     if (count2 <= 10)
                     {
                         Attack1();
                     }
-                    else
+                    else if(count2 > 10 && count2 < 21)
                     {
                         Attack2();
+                    }
+                    else
+                    {
+                        Attack3();
                     }
                 }
                 else
                 {
-                    Attack3();
+                    Attack4();
 
                     if (lastAttack == 3)
                     {
@@ -233,6 +276,13 @@ public class WizardBossController : MonoBehaviour
 
     }
 
+    private void Attack4()
+    {
+        anim.SetTrigger("attack4");
+        lastAttack = 4;
+
+    }
+
     public void AttackCooldown()
     {
         StartCoroutine(attackCooldownTimer());
@@ -253,7 +303,7 @@ public class WizardBossController : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         _creditEvent.Invoke();
     }
 }
