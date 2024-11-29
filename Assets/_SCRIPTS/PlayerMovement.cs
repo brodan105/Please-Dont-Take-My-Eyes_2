@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private ParticleSystem runParticle;
     [SerializeField] private Animator anim;
+    [SerializeField] GameObject keyIndicatorGUI;
+    [SerializeField] GameObject gamepadIndicatorGUI;
     public Rigidbody2D rb;
     private PlayerInput _input;
     #endregion
@@ -87,6 +89,25 @@ public class PlayerMovement : MonoBehaviour
         {
             playerFirstMove = false;
             TimeController.instance.StartTimer();
+        }
+
+        // disable the opposite in case one is in and you take out while interacting
+        if(Gamepad.current == null)
+        {
+            gamepadIndicatorGUI.SetActive(false);
+        }
+        else
+        {
+            keyIndicatorGUI.SetActive(false);
+        }
+
+        if (IsGroundedPlatform())
+        {
+            rb.interpolation = RigidbodyInterpolation2D.Extrapolate;
+        }
+        else
+        {
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         }
 
         // Check if player is grounded, if so then start coyote time timer

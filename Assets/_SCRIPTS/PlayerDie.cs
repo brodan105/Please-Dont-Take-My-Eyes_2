@@ -138,7 +138,7 @@ public class PlayerDie : MonoBehaviour
     #region Timers
     private IEnumerator fadeInDelay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
 
         // Decrease Vignette to default (animator)
         fadePanel.SetTrigger("FadeIn");

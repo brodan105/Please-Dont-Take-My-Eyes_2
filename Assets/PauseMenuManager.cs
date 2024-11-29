@@ -21,6 +21,9 @@ public class PauseMenuManager : MonoBehaviour
 
     [SerializeField] AudioListener playerAudioListener;
 
+    AudioSource pauseAudio;
+    AudioSource[] _audioSources;
+
     bool playerCouldMoveBeforePause;
 
     private void Start()
@@ -30,15 +33,20 @@ public class PauseMenuManager : MonoBehaviour
 
     private void Awake()
     {
-        tallyManager = GameObject.FindAnyObjectByType<TallyCountManager>();
+        tallyManager = FindAnyObjectByType<TallyCountManager>();
 
         if(tallyManager == null)
         {
             tallyManager = Instantiate(tallyManagerPrefab.GetComponent<TallyCountManager>());
         }
 
-        tallyManager._timeControl = GameObject.FindAnyObjectByType<TimeController>();
-        tallyManager._pauseReference = GameObject.FindAnyObjectByType<PauseMenuReference>();
+        tallyManager._timeControl = FindAnyObjectByType<TimeController>();
+        tallyManager._pauseReference = FindAnyObjectByType<PauseMenuReference>();
+
+        // Audio
+        _audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        pauseAudio = GetComponent<AudioSource>();
+        UnmuteAudio();
     }
 
     public void UnStuckPlayer()
@@ -76,7 +84,8 @@ public class PauseMenuManager : MonoBehaviour
         tallyManager.UpdateTally();
 
         //playerAudioListener.enabled = true;
-        AudioListener.pause = false;
+        //AudioListener.pause = false;
+        UnmuteAudio();
 
         if (playerCouldMoveBeforePause)
         {
@@ -96,7 +105,8 @@ public class PauseMenuManager : MonoBehaviour
             pulseCooldown.SetActive(false);
 
             //playerAudioListener.enabled = false;
-            AudioListener.pause = true;
+            //AudioListener.pause = true;
+            MuteAudio();
 
             if (PlayerMovement.instance.canMove)
             {
@@ -120,6 +130,36 @@ public class PauseMenuManager : MonoBehaviour
         else
         {
             Unpause();
+        }
+    }
+
+    void MuteAudio()
+    {
+        foreach(AudioSource s in _audioSources)
+        {
+            if(s != pauseAudio && s.enabled)
+            {
+                s.mute = true;
+            }
+            else if(s == pauseAudio)
+            {
+                s.mute = false;
+            }
+        }
+    }
+
+    void UnmuteAudio()
+    {
+        foreach (AudioSource s in _audioSources)
+        {
+            if (s != pauseAudio && s.enabled)
+            {
+                s.mute = false;
+            }
+            else if (s == pauseAudio)
+            {
+                s.mute = true;
+            }
         }
     }
 

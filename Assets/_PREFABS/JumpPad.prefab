@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 32
-  sfx: {fileID: 8300000, guid: 727797de33bcd9e41988483e0d9f0c58, type: 3}
+  sfx: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
 --- !u!61 &3169815741912180284
 BoxCollider2D:
   m_ObjectHideFlags: 0

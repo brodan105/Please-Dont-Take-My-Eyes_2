@@ -18,6 +18,7 @@ public class ButtonAudioController : MonoBehaviour
     bool playedSFX = true;
     bool canPlay = true;
     bool canPressOnce;
+    bool playPressed;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class ButtonAudioController : MonoBehaviour
 
             playedSFX = false;
 
-            if (!playedSFX)
+            if (!playedSFX && !playPressed)
             {
                 PlayUISFX();
                 playedSFX = true;
@@ -59,15 +60,19 @@ public class ButtonAudioController : MonoBehaviour
 
     public void PlayUIPressedSFX()
     {
+        playPressed = true;
+
         if (canPressOnce)
         {
             _source.PlayOneShot(_UIPressedSFX);
             Destroy(this);
             _eventSys.enabled = false;
+            playPressed = false;
         }
         else
         {
             _source.PlayOneShot(_UIPressedSFX);
+            playPressed = false;
         }
     }
 

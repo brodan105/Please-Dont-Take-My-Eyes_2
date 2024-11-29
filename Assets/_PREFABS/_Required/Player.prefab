@@ -69,7 +69,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -107,8 +107,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.04250145, y: -0.039165497}
-  m_Size: {x: 0.59363174, y: 1.7668514}
+  m_Offset: {x: 0.03116449, y: -0.029425088}
+  m_Size: {x: 0.7599074, y: 1.8078345}
   m_Direction: 0
 --- !u!114 &5526146512325096298
 MonoBehaviour:
@@ -313,6 +313,8 @@ MonoBehaviour:
   groundCheck: {fileID: 6917712021394234563}
   runParticle: {fileID: 3407039182899329173}
   anim: {fileID: 312363118150392360}
+  keyIndicatorGUI: {fileID: 0}
+  gamepadIndicatorGUI: {fileID: 0}
   rb: {fileID: 6868317882961736582}
   playerFirstMove: 1
   speed: 10
@@ -450,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 1155008871825757034}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5000007, y: -0.4999993, z: 0.4999993, w: 0.5000007}
-  m_LocalPosition: {x: 0.04, y: -0, z: -1}
+  m_LocalPosition: {x: 0, y: -0, z: -1}
   m_LocalScale: {x: 0.59341, y: 0.59341, z: 0.59341}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5540,7 +5542,7 @@ Transform:
   m_GameObject: {fileID: 3472229106161205184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.079, y: 0, z: 0}
+  m_LocalPosition: {x: 0.045, y: 0, z: 0}
   m_LocalScale: {x: 0.52423203, y: 1.1385664, z: 0.65529}
   m_ConstrainProportionsScale: 0
   m_Children:
