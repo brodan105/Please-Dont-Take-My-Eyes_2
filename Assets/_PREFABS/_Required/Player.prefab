@@ -5836,7 +5836,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e73b53ad9159f984d92d1b339d7c8fea, type: 3}
   - {fileID: 8300000, guid: 30acb39ab6fb34e4483b6a9762babf91, type: 3}
   - {fileID: 8300000, guid: 4addf27bc80197148be86cb2bd7a41db, type: 3}
-  stepClip: {fileID: 8300000, guid: 09888189076827949a5f8d0f22f3cdd5, type: 3}
+  stepClip: {fileID: 8300000, guid: 5dddc67a62e80224ea6b42141fa5af76, type: 3}
   deathClip: {fileID: 8300000, guid: 1e26735133e3ec342ade81d076dfcc30, type: 3}
   jumpClip: {fileID: 8300000, guid: 280bc0cdef428f44985b529f263c4d88, type: 3}
   pulseClip: {fileID: 8300000, guid: e95d9ef151ce1da48b99129b8db57aa0, type: 3}

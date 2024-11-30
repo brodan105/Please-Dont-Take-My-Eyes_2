@@ -5,8 +5,26 @@ public class CallEventOnStart : MonoBehaviour
 {
     [SerializeField] UnityEvent startEvent;
 
+    public enum whenToCall { onStart, onAwake, function }
+    public whenToCall callState = whenToCall.onStart;
+
     private void Start()
     {
-        startEvent.Invoke();
+        if(callState == whenToCall.onStart)
+            startEvent.Invoke();
+    }
+
+    private void Awake()
+    {
+        if (callState == whenToCall.onAwake)
+            startEvent.Invoke();
+    }
+
+    public void ActivateEvent()
+    {
+        if(callState == whenToCall.function)
+        {
+            startEvent.Invoke();
+        }
     }
 }

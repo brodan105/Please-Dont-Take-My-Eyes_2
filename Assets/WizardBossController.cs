@@ -12,14 +12,14 @@ public class WizardBossController : MonoBehaviour
     [SerializeField] Vector2 playerOffset;
     [SerializeField] GameObject hand_Left;
     [SerializeField] GameObject hand_Right;
-    [SerializeField]  BossEnemy _bossEnemy;
+    [SerializeField] BossEnemy _bossEnemy;
 
     Animator anim;
 
     // Properties
     string bossName;
     float attackCooldown;
-    float health;
+    [SerializeField] float health;
     float damage;
 
     // last attack tracker
@@ -81,7 +81,8 @@ public class WizardBossController : MonoBehaviour
     public void Defeat()
     {
         Debug.Log("DEFEATED");
-        anim.SetTrigger("Defeated");
+        anim.SetBool("isDefeated", true);
+        anim.SetBool("isIdle", false);
         _defeatEvent.Invoke();
         StopAllCoroutines();
         StopCoroutine(actionCooldown());
