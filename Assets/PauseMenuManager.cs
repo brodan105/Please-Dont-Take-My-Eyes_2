@@ -19,8 +19,6 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] GameObject _pauseMenu, pulseCooldown;
     [SerializeField] GameObject _pausePanel, _optionPanel;
 
-    [SerializeField] AudioListener playerAudioListener;
-
     AudioSource pauseAudio;
     AudioSource[] _audioSources;
 
@@ -76,16 +74,15 @@ public class PauseMenuManager : MonoBehaviour
     {
         OpenPausePanel();
 
+        //AudioListener.pause = false;
+        UnmuteAudio();
+
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         pulseCooldown.SetActive(true);
 
         // Update tally counts
         tallyManager.UpdateTally();
-
-        //playerAudioListener.enabled = true;
-        //AudioListener.pause = false;
-        UnmuteAudio();
 
         if (playerCouldMoveBeforePause)
         {
@@ -100,13 +97,12 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (isPaused)
         {
+            //AudioListener.pause = true;
+            MuteAudio();
+
             Time.timeScale = 0;
             _pauseMenu.SetActive(true);
             pulseCooldown.SetActive(false);
-
-            //playerAudioListener.enabled = false;
-            //AudioListener.pause = true;
-            MuteAudio();
 
             if (PlayerMovement.instance.canMove)
             {

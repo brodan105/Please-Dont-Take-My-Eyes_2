@@ -62,11 +62,16 @@ public class InteractController : MonoBehaviour
     {
         if (destroyActivated && OneTimeDestroy) return;
 
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && !hasActivated)
         {
             inTrigger = true;
 
             EnableGUI();
+        }
+
+        if (hasActivated)
+        {
+            DisableGUI();
         }
     }
 
