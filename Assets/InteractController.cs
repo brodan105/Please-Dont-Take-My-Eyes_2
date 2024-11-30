@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -14,6 +15,7 @@ public class InteractController : MonoBehaviour
     bool destroyActivated = false;
     [SerializeField] bool OneTimeDestroy;
     [SerializeField] bool locked;
+    bool canActivate = true;
     bool hasActivated;
 
     [SerializeField] public UnityEvent _unlockedEvent;
@@ -32,6 +34,8 @@ public class InteractController : MonoBehaviour
     {
         if(inTrigger && interactAction.WasPressedThisFrame() && !hasActivated)
         {
+            if (!canActivate) return;
+
             if (locked)
             {
                 _lockedEvent.Invoke();
@@ -50,6 +54,7 @@ public class InteractController : MonoBehaviour
                     DestroyComponent();
                 }
             }
+            StartCoroutine(interactCooldown());
         }
     }
 
@@ -139,20 +144,10 @@ public class InteractController : MonoBehaviour
         Destroy(this);
     }
 
-    /*
-    public void Interact(InputAction.CallbackContext context)
+    IEnumerator interactCooldown()
     {
-        if (activated && OneTimeDestroy) return;
-
-        if(inTrigger && context.action.WasPressedThisFrame())
-        {
-            _unlockedEvent.Invoke();
-
-            if (OneTimeDestroy)
-            {
-                activated = true;
-            }
-        }
+        canActivate = false;
+        yield return new WaitForSeconds(1);
+        canActivate = true;
     }
-    */
 }

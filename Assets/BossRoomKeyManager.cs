@@ -7,15 +7,22 @@ public class BossRoomKeyManager : MonoBehaviour
     [SerializeField] int keysNeeded = 1;
     int keysObtained;
 
-    public void AddKey()
-    {
-        Debug.Log("GOT A KEY");
-        keysObtained++;
+    bool allKeysObtained;
 
-        if(keysObtained == keysNeeded)
+    private void Update()
+    {
+        if(KeyCounter.instance != null)
         {
-            _event.Invoke();
-            Debug.Log("Door Unlocked");
+            if (!allKeysObtained)
+            {
+                keysObtained = KeyCounter.instance.keyCount;
+
+                if(keysObtained == keysNeeded)
+                {
+                    allKeysObtained = true;
+                    _event.Invoke();
+                }
+            }
         }
     }
 

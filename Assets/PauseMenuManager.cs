@@ -8,7 +8,8 @@ using TMPro;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    bool isPaused = false;
+    public bool isPaused = false;
+    bool canPause = true;
 
     TallyCountManager tallyManager;
     [SerializeField] GameObject tallyManagerPrefab;
@@ -60,9 +61,12 @@ public class PauseMenuManager : MonoBehaviour
 
     public void PauseButton(InputAction.CallbackContext context)
     {
-        isPaused = !isPaused;
+        if (canPause)
+        {
+            isPaused = !isPaused;
 
-        CheckPause();
+            CheckPause();
+        }
     }
 
     void CheckPause()
@@ -91,6 +95,11 @@ public class PauseMenuManager : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void disablePause()
+    {
+        canPause = false;
     }
 
     public void Pause()
@@ -177,5 +186,13 @@ public class PauseMenuManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         _event.SetSelectedGameObject(firstSelectedButton_Option);
+    }
+
+    public void ReturningToMainMenu()
+    {
+        if(PlayerMovement.instance != null)
+        {
+            PlayerMovement.instance.StopMovement();
+        }
     }
 }

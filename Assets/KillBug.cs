@@ -11,7 +11,7 @@ public class KillBug : MonoBehaviour
 
     CinemachineImpulseSource impulseSource;
 
-    bool isDead = false;
+    public bool isDead = false;
 
     private void Awake()
     {

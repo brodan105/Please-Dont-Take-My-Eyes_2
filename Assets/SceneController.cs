@@ -20,12 +20,12 @@ public class SceneController : MonoBehaviour
     {
         if(_tally == null)
         {
-            _tally = GameObject.FindAnyObjectByType<TallyCountManager>();
+            _tally = FindAnyObjectByType<TallyCountManager>();
         }
 
         if(_options == null)
         {
-            _options = GameObject.FindAnyObjectByType<OptionValueHandler>();
+            _options = FindAnyObjectByType<OptionValueHandler>();
         }
     }
 
@@ -39,33 +39,43 @@ public class SceneController : MonoBehaviour
     {
         StartCoroutine(returnMenuFade());
 
-        TimeController.instance.StopTimer();
-
-        if(_options != null)
+        if(TimeController.instance != null)
         {
-            Destroy(_options);
+            TimeController.instance.StopTimer();
         }
         
         if(_tally != null)
         {
-            Destroy(_tally);
+            Destroy(_tally.gameObject);
         }
     }
 
     public void NextScene()
     {
         StartCoroutine(nextSceneFade());
-        PlayerMovement.instance.StopMovement();
+        if(PlayerMovement.instance != null)
+        {
+            PlayerMovement.instance.StopMovement();
+        }
 
-        TimeController.instance.StopTimer();
+        if (TimeController.instance != null)
+        {
+            TimeController.instance.StopTimer();
+        }
     }
 
     public void ReloadScene()
     {
         StartCoroutine(reloadSceneFade());
-        PlayerMovement.instance.StopMovement();
+        if (PlayerMovement.instance != null)
+        {
+            PlayerMovement.instance.StopMovement();
+        }
 
-        TimeController.instance.ReloadTimer();
+        if (TimeController.instance != null)
+        {
+            TimeController.instance.ReloadTimer();
+        }
 
         _tally.RestartLevelCounts();
     }
@@ -73,9 +83,15 @@ public class SceneController : MonoBehaviour
     public void ReloadBossScene()
     {
         StartCoroutine(reloadSceneFade());
-        PlayerMovement.instance.StopMovement();
+        if (PlayerMovement.instance != null)
+        {
+            PlayerMovement.instance.StopMovement();
+        }
 
-        TimeController.instance.ReloadTimer();
+        if(TimeController.instance != null)
+        {
+            TimeController.instance.ReloadTimer();
+        }     
     }
 
     public void Quit()

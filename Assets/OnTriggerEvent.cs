@@ -38,8 +38,6 @@ public class OnTriggerEvent : MonoBehaviour
         // delay timer
         yield return new WaitForSeconds(activationDelay);
 
-        Debug.Log("ON TRIGGER"); 
-
         // invoke any event set
         _event.Invoke();
 

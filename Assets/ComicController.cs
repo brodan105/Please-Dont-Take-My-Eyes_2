@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 
 public class ComicController : MonoBehaviour
 {
-    [SerializeField] PlayerInput input;
     [SerializeField] Animator comicAnim;
+    [SerializeField] PauseMenuManager _pauseMenu;
     [SerializeField] AudioClip sfx;
 
     AudioSource _source;
@@ -26,7 +26,10 @@ public class ComicController : MonoBehaviour
 
     public void NextSlide_Button(InputAction.CallbackContext context)
     {
-        NextSlide();
+        if (!_pauseMenu.isPaused)
+        {
+            NextSlide();
+        }
     }
 
     void NextSlide()

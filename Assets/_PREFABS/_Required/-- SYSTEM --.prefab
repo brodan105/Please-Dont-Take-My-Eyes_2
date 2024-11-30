@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 1733750185047300923}
   - component: {fileID: 2874600582836937577}
   - component: {fileID: 1633365358197088452}
+  - component: {fileID: 8874471019401342900}
   m_Layer: 0
   m_Name: Game Master
   m_TagString: Untagged
@@ -291,3 +292,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAnim: {fileID: 0}
+--- !u!114 &8874471019401342900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019000343560186836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6f1e6b7fbade24c893af65e3774619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

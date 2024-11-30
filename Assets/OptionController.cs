@@ -17,7 +17,7 @@ public class OptionController : MonoBehaviour
     {
         masterVolSlider.value = AudioListener.volume;
 
-        handler = GameObject.FindAnyObjectByType<OptionValueHandler>();
+        handler = FindAnyObjectByType<OptionValueHandler>();
 
         if(handler == null)
         {
@@ -26,10 +26,15 @@ public class OptionController : MonoBehaviour
 
         if (handler.timerBool)
         {
-            PauseMenuReference.instance.speedRunTimer.SetActive(true);
+            if(PauseMenuReference.instance != null)
+            {
+                PauseMenuReference.instance.speedRunTimer.SetActive(true);
+            }
+
+            speedRunTimerToggle.isOn = handler.timerBool;
         }
 
-        speedRunTimerToggle.isOn = handler.timerBool;
+        
     }
 
     private void Update()

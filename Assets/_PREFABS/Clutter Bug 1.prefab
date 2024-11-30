@@ -96,6 +96,7 @@ MonoBehaviour:
   bugAnim: {fileID: 124871727070528111}
   _patrol: {fileID: 5746614854669348719}
   _audioControl: {fileID: 1492872150920683517}
+  isDead: 0
 --- !u!114 &5783685493851435948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPatrol_Right: 0
+  kBug: {fileID: 4315099179622773729}
   bugAnim_Main: {fileID: 669334033362007515}
   bugAnim_Body: {fileID: 124871727070528111}
   destinationLeft: {fileID: 0}

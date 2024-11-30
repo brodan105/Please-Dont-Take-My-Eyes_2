@@ -7,6 +7,7 @@ public class PlayerAudioController : MonoBehaviour
 
     [Header("Audio Sources")]
     [SerializeField] AudioSource _sourceMain;
+    [SerializeField] AudioSource _sourceStep;
     [SerializeField] AudioSource _sourceJump;
     [SerializeField] AudioSource _sourcePulse;
 
@@ -52,12 +53,17 @@ public class PlayerAudioController : MonoBehaviour
 
     public void playerStep()
     {
-        if (!PlayerDie.instance.hasDied)
+        if (!PlayerDie.instance.hasDied && PlayerMovement.instance.horizontal != 0)
         {
-            _sourceMain.volume = stepVol;
-            _sourceMain.pitch = Random.Range(stepPitchMin, stepPitchMax);
+            _sourceStep.enabled = true;
+            _sourceStep.volume = stepVol;
+            _sourceStep.pitch = Random.Range(stepPitchMin, stepPitchMax);
 
-            _sourceMain.PlayOneShot(stepClip);
+            _sourceStep.PlayOneShot(stepClip);
+        }
+        else if(PlayerMovement.instance.horizontal == 0)
+        {
+            _sourceStep.enabled = false;
         }
     }
 

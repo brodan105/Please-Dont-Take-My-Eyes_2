@@ -265,7 +265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 228882018}
   - component: {fileID: 228882017}
-  - component: {fileID: 228882020}
   m_Layer: 0
   m_Name: Game Master
   m_TagString: Untagged
@@ -340,7 +339,19 @@ MonoBehaviour:
     m_ActionId: 7a5a88d5-53e4-47f2-8eee-9245259ae106
     m_ActionName: 'Player/Pulse[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6274925671376590748}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: PauseButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b084eaa2-beff-4260-b92d-ab4f822dea2c
     m_ActionName: 'Player/Pause/Start[/Keyboard/escape]'
   - m_PersistentCalls:
@@ -421,26 +432,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &228882020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228882016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f37bb6811ab5b4289a4d570bb2b5af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tallyManagerPrefab: {fileID: 6969566260663376381, guid: ab3e3a23ea3f60f4ca70bf9cfb16baef, type: 3}
-  _event: {fileID: 758255722}
-  firstSelectedButton_Pause: {fileID: 698512784741072813}
-  firstSelectedButton_Option: {fileID: 840335833199793254}
-  _pauseMenu: {fileID: 1601233119820707492}
-  pulseCooldown: {fileID: 4639194231906056604}
-  _pausePanel: {fileID: 9062475696848193055}
-  _optionPanel: {fileID: 840335833199793255}
 --- !u!1 &244969741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,9 +1848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b01f44ab06430a438f0566e58af80ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
   comicAnim: {fileID: 1668030923}
-  sfx: {fileID: 8300000, guid: a68d6c9c605feef49a59347b6393fc11, type: 3}
+  _pauseMenu: {fileID: 6274925671376590748}
+  sfx: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
   _event:
     m_PersistentCalls:
       m_Calls:
@@ -2570,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8750614471645327917, guid: 12f0d73d5a4ad4e47940f51ca628a828, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1085085036412358843, guid: 12f0d73d5a4ad4e47940f51ca628a828, type: 3}
@@ -3394,7 +3385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0:00:00
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 932db15dad1eb664ab1a91d94a8b6fbf, type: 2}
   m_sharedMaterial: {fileID: -3866548254171027442, guid: 932db15dad1eb664ab1a91d94a8b6fbf, type: 2}
@@ -4457,6 +4448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f37bb6811ab5b4289a4d570bb2b5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
   tallyManagerPrefab: {fileID: 6969566260663376381, guid: ab3e3a23ea3f60f4ca70bf9cfb16baef, type: 3}
   _event: {fileID: 758255722}
   firstSelectedButton_Pause: {fileID: 698512784741072813}
@@ -5024,7 +5016,43 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 593334896}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: ReturnToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6274925671376590748}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: Unpause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6274925671376590748}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: ReturningToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6274925671376590748}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: disablePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

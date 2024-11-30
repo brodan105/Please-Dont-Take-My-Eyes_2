@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         var em = runParticle.emission;
 
         // Check if moving and grounded
-        if (moveVec.x != 0 && IsGrounded())
+        if (moveVec.x != 0 && IsGrounded() && canMove)
         {
             em.enabled = true;
             anim.SetBool("isRunning", true);

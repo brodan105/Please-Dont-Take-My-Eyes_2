@@ -7,6 +7,8 @@ public class BugPatrol : MonoBehaviour
     [SerializeField] bool startPatrol_Right;
 
     Rigidbody2D rb;
+    [Header("References")]
+    [SerializeField] KillBug kBug;
 
     [Header("Animators")]
     [SerializeField] Animator bugAnim_Main;
@@ -85,7 +87,10 @@ public class BugPatrol : MonoBehaviour
 
     void Turn()
     {
-        bugAnim_Main.SetTrigger("Turn");
+        if (!kBug.isDead)
+        {
+            bugAnim_Main.SetTrigger("Turn");
+        }
     }
 
     void SwapDestination()
