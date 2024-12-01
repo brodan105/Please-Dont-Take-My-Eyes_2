@@ -288,7 +288,7 @@ AudioSource:
   m_GameObject: {fileID: 3117363607791253900}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3165942800488051908, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -416,7 +416,6 @@ MonoBehaviour:
   bugAnim_Body: {fileID: 124871727070528111}
   destinationLeft: {fileID: 0}
   destinationRight: {fileID: 0}
-  transitionDuration: 3
   speed: 2
   turnPause: 2
 --- !u!1 &3522294070761661359

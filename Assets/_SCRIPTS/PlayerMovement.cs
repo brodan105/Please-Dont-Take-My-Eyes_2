@@ -319,8 +319,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Has to read the x-axis only, because horizontal is origially a float, a float cannot read a Vector2 because a Vector2 returns two floats
         // (x-axis float, and a y-axis float).
-        horizontal = context.ReadValue<Vector2>().x;
-        vertical = context.ReadValue<Vector2>().y;
+
+        if (canMove)
+        {
+            horizontal = context.ReadValue<Vector2>().x;
+            vertical = context.ReadValue<Vector2>().y;
+        }
     }
 
     // Uses the InputAction.CallbackContext to reference the InputAction event, where it will reference your keybind placed from the Input Action Asset

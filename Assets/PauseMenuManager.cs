@@ -26,7 +26,6 @@ public class PauseMenuManager : MonoBehaviour
     AudioSource[] _audioSources;
 
     bool playerCouldMoveBeforePause;
-    bool fadeOut;
 
     private void Start()
     {

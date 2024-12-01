@@ -8,12 +8,16 @@ public class SceneController : MonoBehaviour
 
     public static SceneController instance;
 
+    AudioSource[] _audioSources;
+
     TallyCountManager _tally;
     OptionValueHandler _options;
 
     private void Awake()
     {
         instance = this;
+
+        _audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
     }
 
     private void Update()
@@ -30,9 +34,40 @@ public class SceneController : MonoBehaviour
     }
 
     #region Functions
+
+    public void FadeAllAudio()
+    {
+        foreach (AudioSource a in _audioSources)
+        {
+            if (a.GetComponent<Animator>() != null)
+            {
+                a.GetComponent<Animator>().enabled = false;
+            }
+            StartCoroutine(StartFade(a, 1.5f, 0));
+        }
+    }
+
+    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    {
+        float currentTime = 0;
+        float start = audioSource.volume;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        yield break;
+    }
+
     public void MainMenu_Play()
     {
         StartCoroutine(menuPlayFade());
+
+        if(_audioSources.Length > 0)
+        {
+            FadeAllAudio();
+        }
     }
 
     public void ReturnToMainMenu()
@@ -48,6 +83,11 @@ public class SceneController : MonoBehaviour
         {
             Destroy(_tally.gameObject);
         }
+
+        if (_audioSources.Length > 0)
+        {
+            FadeAllAudio();
+        }
     }
 
     public void NextScene()
@@ -61,6 +101,11 @@ public class SceneController : MonoBehaviour
         if (TimeController.instance != null)
         {
             TimeController.instance.StopTimer();
+        }
+
+        if (_audioSources.Length > 0)
+        {
+            FadeAllAudio();
         }
     }
 
@@ -78,6 +123,11 @@ public class SceneController : MonoBehaviour
         }
 
         _tally.RestartLevelCounts();
+
+        if (_audioSources.Length > 0)
+        {
+            FadeAllAudio();
+        }
     }
 
     public void ReloadBossScene()
@@ -91,7 +141,12 @@ public class SceneController : MonoBehaviour
         if(TimeController.instance != null)
         {
             TimeController.instance.ReloadTimer();
-        }     
+        }
+
+        if (_audioSources.Length > 0)
+        {
+            FadeAllAudio();
+        }
     }
 
     public void Quit()
