@@ -13,7 +13,6 @@ public class CameraController : MonoBehaviour
     [SerializeField] Vector3 desiredCamPos;
     [SerializeField] float tTime = 0.5f;
     [SerializeField] float cameraFOV;
-    [SerializeField] float cameraTransitionTime = 1f;
 
     bool startTransition = false;
 

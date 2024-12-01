@@ -32,10 +32,7 @@ public class WizardBossController : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] float attack1Time;
-    [SerializeField] float moveSpeed = 3f;
-    [SerializeField] float attackSpeed = 5f;
-
-    int cooldownTime = 5;
+    float cooldownTime = 5;
 
     private void Awake()
     {
@@ -51,19 +48,22 @@ public class WizardBossController : MonoBehaviour
     {
         if(health == 60)
         {
-            cooldownTime = 3;
+            cooldownTime = 2.5f;
+            anim.SetFloat("SpeedMultiplier", 1.2f);
         }
         else if(health == 40)
         {
-            cooldownTime = 2;
+            cooldownTime = 1.5f;
+            anim.SetFloat("SpeedMultiplier", 1.3f);
         }
         else if(health == 20)
         {
-            cooldownTime = 1;
+            cooldownTime = 0.5f;
+            anim.SetFloat("SpeedMultiplier", 1.4f);
         }
         else
         {
-            cooldownTime = 5;
+            cooldownTime = 3;
         }
 
         if(health <= 0 && !defeated)

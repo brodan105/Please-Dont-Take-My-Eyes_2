@@ -8,6 +8,8 @@ using TMPro;
 
 public class PauseMenuManager : MonoBehaviour
 {
+    public static PauseMenuManager instance;
+
     public bool isPaused = false;
     bool canPause = true;
 
@@ -24,9 +26,11 @@ public class PauseMenuManager : MonoBehaviour
     AudioSource[] _audioSources;
 
     bool playerCouldMoveBeforePause;
+    bool fadeOut;
 
     private void Start()
     {
+        instance = this;
         CheckPause();
     }
 

@@ -33,8 +33,6 @@ public class OptionController : MonoBehaviour
 
             speedRunTimerToggle.isOn = handler.timerBool;
         }
-
-        
     }
 
     private void Update()

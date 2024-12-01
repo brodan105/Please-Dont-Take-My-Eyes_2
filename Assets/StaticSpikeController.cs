@@ -11,6 +11,11 @@ public class StaticSpikeController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Awake()
+    {
+        StartCoroutine(initial());
+    }
+
     public void ExtendLeft()
     {
         StartCoroutine(ELeft());
@@ -29,6 +34,13 @@ public class StaticSpikeController : MonoBehaviour
     public void RetractRight()
     {
         StartCoroutine(RRight());
+    }
+
+    public void Complete()
+    {
+        anim.SetBool("completed", true);
+        anim.SetTrigger("Fall");
+        StopAllCoroutines();
     }
 
     IEnumerator ELeft()
@@ -53,5 +65,11 @@ public class StaticSpikeController : MonoBehaviour
     {
         yield return new WaitForSeconds(15f);
         anim.SetTrigger("RightFall");
+    }
+
+    IEnumerator initial()
+    {
+        yield return new WaitForSeconds(4f);
+        anim.SetTrigger("initial");
     }
 }

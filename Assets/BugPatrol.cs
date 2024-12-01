@@ -20,7 +20,6 @@ public class BugPatrol : MonoBehaviour
     bool destinationIsLeft;
 
     [Header("Properties")]
-    [SerializeField] float transitionDuration = 1f;
     [SerializeField] float speed = 2f;
     [SerializeField] float turnPause;
 

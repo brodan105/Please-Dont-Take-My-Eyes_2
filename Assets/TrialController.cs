@@ -10,8 +10,6 @@ public class TrialController : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Animator rightAnim;
 
-    bool extended = false;
-
     private void Start()
     {
         instance = this;
@@ -20,7 +18,6 @@ public class TrialController : MonoBehaviour
     public void QueueNextTrial()
     {
         StartCoroutine(TrialDelay());
-        extended = false;
         TrialRetract();
     }
     public void NextTrial()
@@ -28,7 +25,6 @@ public class TrialController : MonoBehaviour
         //if (trialCounter == 0 || trialCounter > 5) return;
 
         trialCounter++;
-        extended = true;
         TrialExtend();
     }
 

@@ -53,7 +53,7 @@ public class PlayerAudioController : MonoBehaviour
 
     public void playerStep()
     {
-        if (!PlayerDie.instance.hasDied && PlayerMovement.instance.horizontal != 0)
+        if (!PlayerDie.instance.hasDied && PlayerMovement.instance.horizontal != 0 && PlayerMovement.instance.IsGrounded())
         {
             _sourceStep.enabled = true;
             _sourceStep.volume = stepVol;
