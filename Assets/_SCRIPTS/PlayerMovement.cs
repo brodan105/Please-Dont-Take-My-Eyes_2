@@ -51,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    [Header("Air Movement")]
+    [SerializeField] private float airDeceleration = 10f; // Deceleration rate when airborne without input
+
     public float horizontal;
     public bool canMove = true;
 
@@ -82,7 +85,23 @@ public class PlayerMovement : MonoBehaviour
         if (canMove && PlayerDie.instance.fadePanel.GetComponent<Image>().color.a < 0.25f)
         {
             // Allows player to move vertically but locks them horizontally
-            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
+            //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
+
+            float targetSpeed = horizontal * speed;
+
+            if (Mathf.Abs(horizontal) > 0.01f)
+            {
+                // Apply input-based movement
+                rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
+            }
+            else if (!IsGrounded() || !IsWalled())
+            {
+                // Apply deceleration when not grounded, not walled, and no input
+                rb.linearVelocity = new Vector2(
+                    Mathf.MoveTowards(rb.linearVelocity.x, 0, airDeceleration * Time.fixedDeltaTime),
+                    rb.linearVelocity.y
+                );
+            }
         }
 
         // Check if need to start speedrun timer

@@ -116,16 +116,19 @@ public class PauseMenuManager : MonoBehaviour
             _pauseMenu.SetActive(true);
             pulseCooldown.SetActive(false);
 
-            if (PlayerMovement.instance.canMove)
+            if(PlayerMovement.instance != null)
             {
-                playerCouldMoveBeforePause = true;
-            }
-            else
-            {
-                playerCouldMoveBeforePause = false;
-            }
+                if (PlayerMovement.instance.canMove)
+                {
+                    playerCouldMoveBeforePause = true;
+                }
+                else
+                {
+                    playerCouldMoveBeforePause = false;
+                }
 
-            PlayerMovement.instance.StopMovement();
+                PlayerMovement.instance.StopMovement();
+            }
 
             if (Gamepad.current == null)
             {

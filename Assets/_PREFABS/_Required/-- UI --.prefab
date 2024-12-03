@@ -2569,7 +2569,7 @@ MonoBehaviour:
   masterVolSlider: {fileID: 2484849668422938555}
   sfxVolSlider: {fileID: 8716756967110926780}
   uiVolSlider: {fileID: 7677714669813711468}
-  backgroundVolSlider: {fileID: 0}
+  backgroundVolSlider: {fileID: 3874994839187176962}
   speedRunTimerToggle: {fileID: 5447871807780337999}
   _mixer: {fileID: 24100000, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
 --- !u!114 &4731715488729809708
@@ -4891,6 +4891,17 @@ RectTransform:
 --- !u!114 &2484849668422938555 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5151836719032199995, guid: 04a8d687ed3ef3748a05bcb365fd697e, type: 3}
+  m_PrefabInstance: {fileID: 7279213003468358784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3874994839187176962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5819296056526764674, guid: 04a8d687ed3ef3748a05bcb365fd697e, type: 3}
   m_PrefabInstance: {fileID: 7279213003468358784}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
