@@ -59,7 +59,7 @@ public class PlayerDie : MonoBehaviour
         //TimeController.instance.ResetTimer();
 
         // Set playerFirstMove to true so it'll check the players movement to start timer
-        //PlayerMovement.instance.playerFirstMove = true;
+        //PlayerMovement.instance.playerFirstMove = true
 
         // Move character to spawn
         transform.position = playerSpawn.position;
@@ -90,6 +90,8 @@ public class PlayerDie : MonoBehaviour
     public void Die()
     {
         hasDied = true;
+
+        PlayerMovement.instance.horizontal = 0;
 
         // Stop speedrun timer
         //TimeController.instance.StopTimer();

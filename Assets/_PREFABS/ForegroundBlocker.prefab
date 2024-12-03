@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5724932327541843780}
   - component: {fileID: 3864411830332571707}
   - component: {fileID: 2213425472188745742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ForegroundBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

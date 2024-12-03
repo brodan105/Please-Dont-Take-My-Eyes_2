@@ -6,6 +6,8 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] Animator fadeAnim;
 
+    [SerializeField] float delayTime = 3f;
+
     public static SceneController instance;
 
     AudioSource[] _audioSources;
@@ -18,6 +20,8 @@ public class SceneController : MonoBehaviour
         instance = this;
 
         _audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+
+        FadeInAllAudio();
     }
 
     private void Update()
@@ -35,7 +39,7 @@ public class SceneController : MonoBehaviour
 
     #region Functions
 
-    public void FadeAllAudio()
+    public void FadeOutAllAudio()
     {
         foreach (AudioSource a in _audioSources)
         {
@@ -43,18 +47,34 @@ public class SceneController : MonoBehaviour
             {
                 a.GetComponent<Animator>().enabled = false;
             }
-            StartCoroutine(StartFade(a, 1.5f, 0));
+            float startVolume = a.volume;
+
+            StartCoroutine(StartFade(a, 1.5f, startVolume, 0));
         }
     }
 
-    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    public void FadeInAllAudio()
+    {
+        foreach(AudioSource a in _audioSources)
+        {
+            if(a.GetComponent<Animator>() != null)
+            {
+                a.GetComponent<Animator>().enabled = false;
+            }
+
+            float targetVolume = a.volume;
+
+            StartCoroutine(StartFade(a, 1.5f, 0, targetVolume));
+        }
+    }
+
+    public static IEnumerator StartFade(AudioSource audioSource, float duration, float startVolume, float targetVolume)
     {
         float currentTime = 0;
-        float start = audioSource.volume;
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            audioSource.volume = Mathf.Lerp(startVolume, targetVolume, currentTime / duration);
             yield return null;
         }
         yield break;
@@ -66,7 +86,7 @@ public class SceneController : MonoBehaviour
 
         if(_audioSources.Length > 0)
         {
-            FadeAllAudio();
+            FadeOutAllAudio();
         }
     }
 
@@ -86,7 +106,7 @@ public class SceneController : MonoBehaviour
 
         if (_audioSources.Length > 0)
         {
-            FadeAllAudio();
+            FadeOutAllAudio();
         }
     }
 
@@ -105,7 +125,7 @@ public class SceneController : MonoBehaviour
 
         if (_audioSources.Length > 0)
         {
-            FadeAllAudio();
+            FadeOutAllAudio();
         }
     }
 
@@ -126,7 +146,7 @@ public class SceneController : MonoBehaviour
 
         if (_audioSources.Length > 0)
         {
-            FadeAllAudio();
+            FadeOutAllAudio();
         }
     }
 
@@ -145,7 +165,7 @@ public class SceneController : MonoBehaviour
 
         if (_audioSources.Length > 0)
         {
-            FadeAllAudio();
+            FadeOutAllAudio();
         }
     }
 
@@ -159,27 +179,27 @@ public class SceneController : MonoBehaviour
     IEnumerator menuPlayFade()
     {
         fadeAnim.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(delayTime);
         SceneManager.LoadScene(1);
     }
 
     IEnumerator nextSceneFade()
     {
         fadeAnim.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(delayTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     IEnumerator returnMenuFade()
     {
         fadeAnim.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(delayTime);
+        SceneManager.LoadScene(1);
     }
     IEnumerator reloadSceneFade()
     {
         fadeAnim.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(delayTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion

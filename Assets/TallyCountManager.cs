@@ -46,6 +46,8 @@ public class TallyCountManager : MonoBehaviour
 
     public void UpdateTally()
     {
+        if (_pauseReference == null) return;
+
         _pauseReference.collectableText.text = "Collectables Gathered: " + collectableCount;
         _pauseReference.enemyText.text = "Enemies Defeated: " + enemyCount;
         _pauseReference.deathText.text = "Player Deaths: " + deathCount;

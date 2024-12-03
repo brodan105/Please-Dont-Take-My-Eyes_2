@@ -12,11 +12,16 @@ public class OptionController : MonoBehaviour
     [SerializeField] GameObject handlerPrefab;
 
     [SerializeField] Slider masterVolSlider;
-    public Slider sfxVolSlider;
+    [SerializeField] Slider sfxVolSlider;
+    [SerializeField] Slider uiVolSlider;
+    [SerializeField] Slider backgroundVolSlider;
     [SerializeField] Toggle speedRunTimerToggle;
 
     float masterVolume;
-    public float sfxVolume;
+    float sfxVolume;
+    float uiVolume;
+    float backgroundVolume;
+
 
     [SerializeField] private AudioMixer _mixer;
 
@@ -33,8 +38,12 @@ public class OptionController : MonoBehaviour
 
         masterVolSlider.value = AudioListener.volume;
         sfxVolSlider.value = handler.sfxVolumeValue;
+        uiVolSlider.value = handler.uiVolumeValue;
+        backgroundVolSlider.value = handler.backgroundVolumeValue;
 
         _mixer.SetFloat("SFX", handler.sfxVolumeValue);
+        _mixer.SetFloat("UI", handler.uiVolumeValue);
+        _mixer.SetFloat("Background", handler.backgroundVolumeValue);
 
         if (handler.timerBool)
         {
@@ -60,6 +69,26 @@ public class OptionController : MonoBehaviour
         if(handler != null)
         {
             handler.sfxVolumeValue = value;
+        }
+    }
+
+    public void OnUIVolumeChange(float value)
+    {
+        _mixer.SetFloat("UI", Mathf.Log10(value) * 20);
+
+        if(handler != null)
+        {
+            handler.uiVolumeValue = value;
+        }
+    }
+
+    public void OnBackgroundVolumeChange(float value)
+    {
+        _mixer.SetFloat("Background", Mathf.Log10(value) * 20);
+
+        if (handler != null)
+        {
+            handler.backgroundVolumeValue = value;
         }
     }
 

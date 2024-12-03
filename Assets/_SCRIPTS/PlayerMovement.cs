@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     // Wall Slide
     private bool isWallSliding;
     private bool isWallJumping;
+    private bool hasWallJumped;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
@@ -124,6 +125,11 @@ public class PlayerMovement : MonoBehaviour
         }
         #endregion
 
+        if(horizontal != 0 || vertical != 0 || IsGrounded() || IsWalled())
+        {
+            hasWallJumped = false;
+        }
+
         // Activate run particle
         #region Run Particle
         var move = _input.actions["Move"];
@@ -161,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
             if (wallJumpingCounter > 0f)
             {
                 StartCoroutine(WallJumpTimer());
+                hasWallJumped = true;
                 isWallJumping = true;
                 rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
                 wallJumpingCounter = 0f;
@@ -182,6 +189,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (hasWallJumped)
+        {
+            rb.linearVelocity = new Vector2(wallJumpingDirection * speed, rb.linearVelocityY);
         }
 
         if (jumpBufferCounter > 0 && coyoteTimeCounter > 0 && !isJumping && !isWallSliding)
@@ -258,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
 
-        if (IsWalled() && !IsGrounded() && horizontal != 0f)
+        if (IsWalled() && !IsGrounded())
         {
             isWallSliding = true;
             rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Clamp(rb.linearVelocityY, -wallSlidingSpeed, float.MaxValue));
@@ -320,11 +332,8 @@ public class PlayerMovement : MonoBehaviour
         // Has to read the x-axis only, because horizontal is origially a float, a float cannot read a Vector2 because a Vector2 returns two floats
         // (x-axis float, and a y-axis float).
 
-        if (canMove)
-        {
-            horizontal = context.ReadValue<Vector2>().x;
-            vertical = context.ReadValue<Vector2>().y;
-        }
+        horizontal = context.ReadValue<Vector2>().x;
+        vertical = context.ReadValue<Vector2>().y;
     }
 
     // Uses the InputAction.CallbackContext to reference the InputAction event, where it will reference your keybind placed from the Input Action Asset
