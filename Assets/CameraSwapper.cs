@@ -20,6 +20,8 @@ public class CameraSwapper : MonoBehaviour
 
     public void SwitchToFollow()
     {
+        follow.transform.position = main.transform.position;
+
         follow.Prioritize();
     }
 }
