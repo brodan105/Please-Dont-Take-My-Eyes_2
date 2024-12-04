@@ -124,14 +124,14 @@ MonoBehaviour:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.23500061, y: 0.47499084, z: 0}
+      m_Extent: {x: 0.24499512, y: 0.48498535, z: 0}
     m_EdgeProcessing: 1
-    m_TrimEdge: 0.01
+    m_TrimEdge: 0
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.01
+    m_InitialTrim: 0
   m_CastingOption: 1
-  m_PreviousTrimEdge: 0.01
+  m_PreviousTrimEdge: 0
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 2
   m_PreviousShadowShape2DSource: {fileID: 675587902542782138}
@@ -265,14 +265,14 @@ MonoBehaviour:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.23500061, y: 0.47499084, z: 0}
+      m_Extent: {x: 0.24499512, y: 0.48498535, z: 0}
     m_EdgeProcessing: 1
-    m_TrimEdge: 0.01
+    m_TrimEdge: 0
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.01
+    m_InitialTrim: 0
   m_CastingOption: 1
-  m_PreviousTrimEdge: 0.01
+  m_PreviousTrimEdge: 0
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 2
   m_PreviousShadowShape2DSource: {fileID: 4925515924110441950}
@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 804419400301078505}
   - component: {fileID: 1150998565727588269}
   - component: {fileID: 3718583704822392196}
+  - component: {fileID: 3529330108200666136}
   m_Layer: 6
   m_Name: Platform 1
   m_TagString: Untagged
@@ -407,6 +408,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 552994fc2ad5cb842828d1512597af20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3529330108200666136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096504177610220608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14050325bf03efc478d5248624db3da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7251483666537539392
@@ -535,14 +548,14 @@ MonoBehaviour:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 3.2999878, y: 0.46498108, z: 0}
+      m_Extent: {x: 3.319992, y: 0.48498535, z: 0}
     m_EdgeProcessing: 1
-    m_TrimEdge: 0.02
+    m_TrimEdge: 0
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
-  m_PreviousTrimEdge: 0.02
+  m_PreviousTrimEdge: 0
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 2
   m_PreviousShadowShape2DSource: {fileID: 5280290584305376320}

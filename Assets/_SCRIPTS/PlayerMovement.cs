@@ -51,8 +51,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
-    [Header("Air Movement")]
-    [SerializeField] private float airDeceleration = 10f; // Deceleration rate when airborne without input
+    [SerializeField] private float airDeceleration = 0.95f; // Factor to decelerate horizontal velocity mid-air
 
     public float horizontal;
     public bool canMove = true;
@@ -87,20 +86,29 @@ public class PlayerMovement : MonoBehaviour
             // Allows player to move vertically but locks them horizontally
             //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
 
-            float targetSpeed = horizontal * speed;
-
-            if (Mathf.Abs(horizontal) > 0.01f)
+            if (IsGrounded())
             {
-                // Apply input-based movement
-                rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
+                // Set horizontal velocity directly when grounded
+                rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
             }
-            else if (!IsGrounded() || !IsWalled())
+            else
             {
-                // Apply deceleration when not grounded, not walled, and no input
-                rb.linearVelocity = new Vector2(
-                    Mathf.MoveTowards(rb.linearVelocity.x, 0, airDeceleration * Time.fixedDeltaTime),
-                    rb.linearVelocity.y
-                );
+                if (horizontal != 0)
+                {
+                    // Allow horizontal movement when input is provided
+                    rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
+                }
+                else
+                {
+                    // Decelerate in the air when no horizontal input is given
+                    rb.linearVelocity = new Vector2(rb.linearVelocityX * airDeceleration, rb.linearVelocityY);
+
+                    // Stop completely when velocity becomes negligible
+                    if (Mathf.Abs(rb.linearVelocityX) < 0.1f)
+                    {
+                        rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
+                    }
+                }
             }
         }
 
