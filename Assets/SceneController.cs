@@ -171,7 +171,11 @@ public class SceneController : MonoBehaviour
 
     public void Quit()
     {
+#if UNITY_WEBGL
+    Debug.Log("Quit command ignored on WebGL.");
+#else
         Application.Quit();
+#endif
     }
     #endregion
 
