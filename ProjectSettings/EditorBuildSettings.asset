@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_SCENES/2Intro.unity
     guid: 4577fd5cdf38891488f40472327a99f7
   - enabled: 1
+    path: Assets/_SCENES/3.1 Wizard.unity
+    guid: 23991e8807d0e7045bf03a3c85f45875
+  - enabled: 1
     path: Assets/_SCENES/3Level 1.1.unity
     guid: 52582cbf722eaad4885d1b5d569989bd
   - enabled: 1
