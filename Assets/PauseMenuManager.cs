@@ -96,8 +96,9 @@ public class PauseMenuManager : MonoBehaviour
             PlayerMovement.instance.StartMovement();
         }
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        //CursorFollow.instance.DisableCursor();
     }
 
     public void disablePause()
@@ -132,8 +133,9 @@ public class PauseMenuManager : MonoBehaviour
 
             if (Gamepad.current == null)
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                UnityEngine.Cursor.visible = true;
+                UnityEngine.Cursor.lockState = CursorLockMode.None;
+                //CursorFollow.instance.EnableCursor();
             }
 
             OpenPausePanel();

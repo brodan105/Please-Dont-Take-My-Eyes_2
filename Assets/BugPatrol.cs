@@ -42,6 +42,7 @@ public class BugPatrol : MonoBehaviour
         }
         else
         {
+            bugAnim_Main.SetBool("isFacingRight", false);
             currentDestination = destinationLeft;
             destinationIsLeft = true;
         }
@@ -88,6 +89,10 @@ public class BugPatrol : MonoBehaviour
     {
         if (!kBug.isDead)
         {
+            if(bugAnim_Main.enabled == false)
+            {
+                bugAnim_Main.enabled = true;
+            }
             bugAnim_Main.SetTrigger("Turn");
         }
     }

@@ -57,7 +57,7 @@ public class DialogueStarter : MonoBehaviour
 
     public void NextLine()
     {
-        if (!canActivateNextLine) return;
+        if (!canActivateNextLine || PauseMenuManager.instance.isPaused) return;
 
         Debug.Log("NEXT LINE");
 

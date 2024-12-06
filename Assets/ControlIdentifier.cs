@@ -34,10 +34,11 @@ public class ControlIdentifier : MonoBehaviour
             hasController = true;
 
             // Set cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+            UnityEngine.Cursor.visible = false;
+            //CursorFollow.instance.DisableCursor();
 
-            if(gamepadIcons.Count > 0)
+            if (gamepadIcons.Count > 0)
             {
                 foreach (GameObject pad in gamepadIcons)
                 {
@@ -58,8 +59,9 @@ public class ControlIdentifier : MonoBehaviour
             hasController = false;
 
             // Set cursor
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
+            //CursorFollow.instance.EnableCursor();
 
             if (gamepadIcons.Count > 0)
             {
