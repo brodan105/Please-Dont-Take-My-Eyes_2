@@ -20,6 +20,7 @@ public class JumpPad : MonoBehaviour
         if(collision.tag == "Player")
         {
             PlayerMovement.instance.JumpPad(jumpPower);
+            PlayerMovement.instance.usedJumpad = true;
 
             anim.SetTrigger("Spring");
 

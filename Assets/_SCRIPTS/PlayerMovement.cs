@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
     public float horizontal;
     public bool canMove = true;
 
+    public bool usedJumpad;
+
     private bool canCheckForInput;
     public float vertical;
     private bool isFacingRight = true;
@@ -86,14 +88,21 @@ public class PlayerMovement : MonoBehaviour
             // Allows player to move vertically but locks them horizontally
             //rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
 
+            if (IsWalled())
+            {
+                usedJumpad = false;
+            }
+
             if (IsGrounded())
             {
                 // Set horizontal velocity directly when grounded
                 rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
+
+                usedJumpad = false;
             }
             else
             {
-                if (horizontal != 0)
+                if (horizontal != 0 || usedJumpad)
                 {
                     // Allow horizontal movement when input is provided
                     rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocityY);
