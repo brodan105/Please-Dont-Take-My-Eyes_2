@@ -12,6 +12,7 @@ public class DialogueStarter : MonoBehaviour
 
     [TextArea]
     [SerializeField] List<string> dialogueLines;
+    [SerializeField] List<string> barkLines;
 
     [SerializeField] List<float> dialogueLineAutomaticDelays;
 
@@ -21,10 +22,12 @@ public class DialogueStarter : MonoBehaviour
 
     [SerializeField] float dialogueOptionalEventDelay;
 
-    public enum dialogueType { active, dedicated }
+    public enum dialogueType { active, dedicated, bark }
     public dialogueType d_type = dialogueType.dedicated;
 
     [SerializeField] float dialogueCooldownTime = 1;
+    [SerializeField] float barkDuration = 3f;
+    [SerializeField] float barkCooldownTime = 5f;
 
     public bool dialogueStarted;
 
@@ -32,6 +35,13 @@ public class DialogueStarter : MonoBehaviour
     bool canActivateNextLine;
 
     int dialogueCount;
+    int barkCount;
+    int lastBarkCount;
+
+    public void ResetCoroutines()
+    {
+        StopAllCoroutines();
+    }
 
     public void StartDialogue()
     {
@@ -96,6 +106,45 @@ public class DialogueStarter : MonoBehaviour
         }
     }
 
+    public void StartBark()
+    {
+        if(d_type == dialogueType.bark)
+        {
+            if(barkCount > barkLines.Count)
+            {
+                barkCount = 0;
+            }
+            dialogueCanvas.SetActive(true);
+            getRandomBark();
+            StartCoroutine(barkCooldown());
+        }
+    }
+
+    void getRandomBark()
+    {
+        int barkNum = Random.Range(0, barkLines.Count);
+
+        if(barkNum == lastBarkCount)
+        {
+            while(barkNum == lastBarkCount)
+            {
+                barkNum = Random.Range(0, barkLines.Count);
+            }
+        }
+        
+        if(barkNum != lastBarkCount)
+        {
+            dialogueText.text = barkLines[barkNum];
+            lastBarkCount = barkNum;
+        }
+    }
+
+    public void StopBark()
+    {
+        StopCoroutine(barkCooldown());
+        dialogueCanvas.SetActive(false);
+    }
+
     public void StopDialogue()
     {
         dialogueStarted = false;
@@ -121,6 +170,24 @@ public class DialogueStarter : MonoBehaviour
         {
             NextLine();
         }
+    }
+
+    public void SetDialogueType_Active()
+    {
+        d_type = dialogueType.active;
+        ResetCoroutines();
+    }
+
+    public void SetDialogueType_Dedicated()
+    {
+        d_type = dialogueType.dedicated;
+        ResetCoroutines();
+    }
+
+    public void SetDialogueType_Bark()
+    {
+        d_type = dialogueType.bark;
+        ResetCoroutines();
     }
 
     IEnumerator dialogueCooldown()
@@ -158,5 +225,17 @@ public class DialogueStarter : MonoBehaviour
             : dialogueCooldownTime);
 
         StopDialogue();
+    }
+
+    IEnumerator barkCooldown()
+    {
+        yield return new WaitForSeconds(barkDuration);
+
+        dialogueCanvas.SetActive(false);
+        dialogueText.text = "";
+
+        yield return new WaitForSeconds(barkCooldownTime);
+
+        StartBark();
     }
 }
