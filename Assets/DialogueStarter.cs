@@ -7,27 +7,38 @@ using UnityEngine.Events;
 
 public class DialogueStarter : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] GameObject dialogueCanvas;
     [SerializeField] TMP_Text dialogueText;
 
+    [Header("Dialogue Lines")]
     [TextArea]
     [SerializeField] List<string> dialogueLines;
+
+    [Header("Dialogue Properties")]
+    [SerializeField] float dialogueOptionalEventDelay;
+    [SerializeField] float dialogueCooldownTime = 1;
+
+    [Header("Bark Lines")]
     [SerializeField] List<string> barkLines;
 
+    [Header("Bark Properties")]
+    [SerializeField] float barkDuration = 3f;
+    [SerializeField] float barkCooldownTime = 5f;
+
+    [Header("Automatic Dialogue Delays")]
     [SerializeField] List<float> dialogueLineAutomaticDelays;
 
+    [Header("Events")]
     [SerializeField] UnityEvent dialogueStartEvent;
     [SerializeField] UnityEvent dialogueStopEvent;
     [SerializeField] UnityEvent dialogueOptionalEvent;
-
-    [SerializeField] float dialogueOptionalEventDelay;
+    [SerializeField] UnityEvent barkStartEvent;
+    [SerializeField] UnityEvent barkEndEvent;
+    [SerializeField] UnityEvent barkCompleteEvent;
 
     public enum dialogueType { active, dedicated, bark }
     public dialogueType d_type = dialogueType.dedicated;
-
-    [SerializeField] float dialogueCooldownTime = 1;
-    [SerializeField] float barkDuration = 3f;
-    [SerializeField] float barkCooldownTime = 5f;
 
     public bool dialogueStarted;
 
@@ -114,6 +125,10 @@ public class DialogueStarter : MonoBehaviour
             {
                 barkCount = 0;
             }
+            if(barkStartEvent != null)
+            {
+                barkStartEvent.Invoke();
+            }
             dialogueCanvas.SetActive(true);
             getRandomBark();
             StartCoroutine(barkCooldown());
@@ -143,6 +158,10 @@ public class DialogueStarter : MonoBehaviour
     {
         StopCoroutine(barkCooldown());
         dialogueCanvas.SetActive(false);
+        if(barkCompleteEvent != null)
+        {
+            barkCompleteEvent.Invoke();
+        }
     }
 
     public void StopDialogue()
@@ -233,6 +252,10 @@ public class DialogueStarter : MonoBehaviour
 
         dialogueCanvas.SetActive(false);
         dialogueText.text = "";
+        if(barkEndEvent != null)
+        {
+            barkEndEvent.Invoke();
+        }
 
         yield return new WaitForSeconds(barkCooldownTime);
 

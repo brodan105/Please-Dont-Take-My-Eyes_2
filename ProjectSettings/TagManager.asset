@@ -10,6 +10,8 @@ TagManager:
   - Door
   - Key
   - Pingable
+  - Enemy
+  - SlashHitBox
   layers:
   - Default
   - TransparentFX

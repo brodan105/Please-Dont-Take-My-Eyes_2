@@ -20,6 +20,9 @@ public class PlayerDie : MonoBehaviour
     [SerializeField] float respawnTime = 5f;
     [SerializeField] bool bossLevel = false;
 
+    PlayerHealth p_health;
+    [SerializeField] GameObject p_healthPrefab;
+
     Rigidbody2D rb;
 
     Vector3 lastDeathLocation;
@@ -35,10 +38,17 @@ public class PlayerDie : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         impulseSource = GetComponent<CinemachineImpulseSource>();
+
+        p_health = FindAnyObjectByType<PlayerHealth>();
     }
 
     private void Update()
     {
+        if(p_health == null)
+        {
+            p_health = Instantiate(p_healthPrefab.GetComponent<PlayerHealth>());
+        }
+
         if (hasDied)
         {
             transform.position = lastDeathLocation;

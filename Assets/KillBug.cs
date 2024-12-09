@@ -9,7 +9,7 @@ public class KillBug : MonoBehaviour
     [SerializeField] BugPatrol _patrol;
     [SerializeField] BugAudioController _audioControl;
 
-    CinemachineImpulseSource impulseSource;
+    public CinemachineImpulseSource impulseSource;
 
     public bool isDead = false;
 
@@ -24,18 +24,18 @@ public class KillBug : MonoBehaviour
 
         if(collision.tag == "Player" && !PlayerDie.instance.hasDied)
         {
+            PlayerMovement.instance.ImpulseJump();
             killBug();
         }
     }
 
-    void killBug()
+    public void killBug()
     {
         deathTrigger.enabled = false;
         _patrol.enabled = false;
         bugAnim.SetTrigger("Die");
         _audioControl.bugDeathSound();
         isDead = true;
-        PlayerMovement.instance.ImpulseJump();
         CameraShakeManager.instance.CameraShake(impulseSource);
 
         // Update tally count
